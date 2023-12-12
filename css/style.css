@@ -1,0 +1,254 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --background-color : #181616;
+    --text-color: rgb(160, 161, 162);
+    --box-color: rgb(42, 42, 42);
+}
+
+
+body{
+    background-color: var(--background-color);
+}
+
+/* ======= navigation bar ========= */
+
+header{
+    overflow: hidden;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+header nav{
+    background-color: #000;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+header nav #title{
+    color: var(--text-color);
+    margin-left: 50px;
+    font-size: 25px;
+}
+
+
+/* ========== sidebar design ========== */
+
+main{
+    display: flex;
+    flex-direction: row;
+}
+
+main #sidebar{
+    position: fixed;
+    width: 250px;
+    height: calc(90vh - 70px);
+    background-color: var(--box-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 5vh;
+    align-items: start;
+    justify-content: start;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+main #sidebar .sidebar-title{
+    margin-left: -20px;
+}
+main #sidebar div{
+    height: 50px;
+    width: 100px;
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+main #sidebar div a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+main #sidebar :is(:not(div:hover), .sidebar-title){
+    /* font-size: 25px; */
+    transform: translateY(3px);
+}
+
+/* ========= sidebar design end =========== */
+
+
+/* ============ main content section ============= */
+main #main-content{
+    margin-left: calc(10vh + 250px);
+    width: calc(100vw - 250px);
+    min-height: 100vh;
+    background-color: var(--background-color);
+    margin-right: 20px;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--box-color); 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--background-color); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #000; 
+  }
+
+/* =========== about section ============== */
+main #main-content > section{
+    min-height: 350px;
+    width: 100%;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5vh 0;
+}
+main #main-content > section > div{
+    /* height same as parent element */
+    min-height: 350px;
+    width: 100%;
+    background-color: var(--box-color);
+    display: flex;
+    flex-direction: column;
+    /* margin: 5vh 0; */
+}
+
+
+/* =========== about section end ============== */
+/* =========== skills section ============ */
+
+
+
+main #main-content > section > div > div{
+    min-height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0 50px;
+    font-size: 30px;
+    color: var(--text-color);
+}
+main #main-content > section > div > :not(:nth-child(1)){
+    margin-bottom: 5vh;
+}
+
+main #skills div.skills-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    /* align-items: center; */
+}
+
+main #skills div.skills-info .box{
+    width: calc(calc(100% / 3) - 10px);
+    min-height: 200px;
+    background-color: var(--box-color);
+    border: 1px dashed var(--text-color);
+    /* display: flex;
+    flex-direction: column; */
+}
+
+
+main #skills div.skills-info .box .title{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+main #skills div.skills-info .box .item-list{
+    font-size: 20px;
+    list-style: none;
+    padding: 10px;
+    /* border: 1px solid red; */
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 5px;
+    row-gap: 5px;
+}
+
+main #skills div.skills-info .box .item-list .items{
+    border: 1px solid rgb(84, 84, 84);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+
+
+/* =========== skills section ============ */
+
+/* =========== Project section ============ */
+
+main #project #project-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: aliceblue; */
+}
+
+main #project #project-list .box{
+    min-height: 250px;
+    width: calc(100% / 4 - 10px);
+    background-color: rgb(64, 64, 64);
+    border-radius: 10px;
+}
+
+
+
+main #project #project-list .box .project-img{
+    height: 150px;
+    width: 100%;
+    border-radius: 10px 10px 0 0px;
+    background: url("../images/image2.jpg") no-repeat;
+    background-size: cover;
+}
+
+main #project #project-list .box .project-info{
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    padding: 20px;
+}
+
+main #project #project-list .box .project-code{
+    font-size: 15px;
+}
+
+main #project #project-list .box .project-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+
+
+/* =========== Project section ============ */
+
+/* ============ main content section end ============ */
