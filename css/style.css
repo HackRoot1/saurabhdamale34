@@ -260,23 +260,58 @@ main #project #project-list .box .project-links{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
     width: 50%;
 }
 
 #contact-me form div{
     width: 100%;
-    height: 70px;
+    min-height: 70px;
 }
 
-#contact-me form div input{
-    width: 48%;
+#contact-me form > div  input{
+    width: 49%;
     height: 50px;
+    border-radius: 5px;
+    padding-left: 20px;
+    background-color: var(--background-color);
+    border: none;
+    outline: none;
+    color: var(--text-color);
+}
+
+#contact-me form > div > input{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    padding-left: 20px;
+    
+}
+
+#contact-me form > div > input[type = 'button']{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    padding: 0;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    font-size: 20px;
+}
+
+
+#contact-me form div .feedback{
+    height: 100px;
 }
 
 #contact-me form div textarea{
-    width: 48%;
-    height: 50px;
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 /* =========== Contact Me section end ============ */
