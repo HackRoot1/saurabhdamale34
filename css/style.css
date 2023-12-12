@@ -249,6 +249,38 @@ main #project #project-list .box .project-links{
 
 
 
-/* =========== Project section ============ */
+/* =========== Project section end ============ */
+
+
+/* =========== Contact Me section ============ */
+
+
+#contact-me form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    width: 50%;
+}
+
+#contact-me form div{
+    width: 100%;
+    height: 70px;
+}
+
+#contact-me form div input{
+    width: 48%;
+    height: 50px;
+}
+
+#contact-me form div textarea{
+    width: 48%;
+    height: 50px;
+}
+
+/* =========== Contact Me section end ============ */
+
+
 
 /* ============ main content section end ============ */
