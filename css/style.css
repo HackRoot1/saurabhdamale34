@@ -114,6 +114,10 @@ main #main-content{
   }
 
 /* =========== about section ============== */
+
+main #main-content > #about-section > div{
+    background: linear-gradient(to right, var(--box-color) 30%, rgb(87, 81, 81));
+}
 main #main-content > section{
     min-height: 350px;
     width: 100%;
