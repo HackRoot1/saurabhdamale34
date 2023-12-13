@@ -254,68 +254,398 @@ main #project #project-list .box .project-links{
 
 /* =========== Contact Me section ============ */
 
+        /* =========== contact form =========== */
+        #contact-me > div > .contact-details{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            /* background-color: aquamarine; */
+            /* justify-content: start; */
+            align-items: start;
+        }
 
-#contact-me form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* background-color: aliceblue; */
-    width: 50%;
-}
+        #contact-me > div > .contact-details > div{
+            width: 50%;
+            padding: 20px;
+            /* background-color: aliceblue; */
+        }
+        #contact-me form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* background-color: aliceblue; */
+            width: 100%;
+        }
 
-#contact-me form div{
-    width: 100%;
-    min-height: 70px;
-}
+        #contact-me form div{
+            width: 100%;
+            min-height: 70px;
+        }
 
-#contact-me form > div  input{
-    width: 49%;
-    height: 50px;
-    border-radius: 5px;
-    padding-left: 20px;
-    background-color: var(--background-color);
-    border: none;
-    outline: none;
-    color: var(--text-color);
-}
+        #contact-me form > div  input{
+            width: 49%;
+            height: 50px;
+            border-radius: 5px;
+            padding-left: 20px;
+            background-color: var(--background-color);
+            border: none;
+            outline: none;
+            color: var(--text-color);
+        }
 
-#contact-me form > div > input{
-    width: 100%;
-    height: 50px;
-    border-radius: 5px;
-    padding-left: 20px;
-    
-}
+        #contact-me form > div > input{
+            width: 100%;
+            height: 50px;
+            border-radius: 5px;
+            padding-left: 20px;
+            
+        }
 
-#contact-me form > div > input[type = 'button']{
-    width: 100%;
-    height: 50px;
-    border-radius: 5px;
-    padding: 0;
-    background-color: var(--text-color);
-    color: var(--background-color);
-    font-size: 20px;
-}
+        #contact-me form > div > input[type = 'button']{
+            width: 100%;
+            height: 50px;
+            border-radius: 5px;
+            padding: 0;
+            background-color: var(--text-color);
+            color: var(--background-color);
+            font-size: 20px;
+        }
 
 
-#contact-me form div .feedback{
-    height: 100px;
-}
+        #contact-me form div .feedback{
+            height: 100px;
+        }
 
-#contact-me form div textarea{
-    width: 100%;
-    height: 100px;
-    border-radius: 5px;
-    padding: 10px;
-    border: none;
-    outline: none;
-    background-color: var(--background-color);
-    color: var(--text-color);
-}
+        #contact-me form div textarea{
+            width: 100%;
+            height: 100px;
+            border-radius: 5px;
+            padding: 10px;
+            border: none;
+            outline: none;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        /* ========= contact form end ========== */
+
+        /* =========== contact form details ========== */
+
+        #contact-me > div > .contact-details > .project-links{
+            padding: 20px;
+            background-color: antiquewhite;
+        }
+        
+        /* =========== contact form details end ========== */
 
 /* =========== Contact Me section end ============ */
 
 
 
 /* ============ main content section end ============ */
+
+
+
+
+
+
+
+
+
+/* =================== Responsive for mobile ================= */
+@media only screen and (max-width: 600px) {
+
+    header{
+        overflow: hidden;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+    }
+
+    main{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    main #sidebar{
+        display: none;
+    }
+    
+
+
+    
+    /* ============ main content section ============= */
+    main #main-content{
+        margin-left: 0;
+        width: 100vw;
+        min-height: 100vh;
+        background-color: var(--background-color);
+        margin-right: 0px;
+    }
+
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: var(--box-color); 
+    }
+   
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: var(--background-color); 
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #000; 
+    }
+
+/* =========== about section ============== */
+    main #main-content > section{
+        min-height: 350px;
+        width: 100%;
+        background-color: var(--background-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 5vh 0;
+    }
+main #main-content > section > div{
+    /* height same as parent element */
+    min-height: 350px;
+    width: 100%;
+    background-color: var(--box-color);
+    display: flex;
+    flex-direction: column;
+    /* margin: 5vh 0; */
+}
+
+
+/* =========== about section end ============== */
+/* =========== skills section ============ */
+
+
+
+main #main-content > section > div > div{
+    min-height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0 50px;
+    font-size: 30px;
+    color: var(--text-color);
+}
+main #main-content > section > div > :not(:nth-child(1)){
+    margin-bottom: 5vh;
+}
+
+main #skills div.skills-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    /* align-items: center; */
+}
+
+main #skills div.skills-info .box{
+    width: 100%;
+    min-height: 200px;
+    background-color: var(--box-color);
+    border: 1px dashed var(--text-color);
+    margin: 10px 0;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+
+main #skills div.skills-info .box .title{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+main #skills div.skills-info .box .item-list{
+    font-size: 20px;
+    list-style: none;
+    padding: 10px;
+    /* border: 1px solid red; */
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: auto auto ;
+    column-gap: 5px;
+    row-gap: 5px;
+}
+
+main #skills div.skills-info .box .item-list .items{
+    border: 1px solid rgb(84, 84, 84);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+
+
+/* =========== skills section ============ */
+
+/* =========== Project section ============ */
+
+main #project #project-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    /* background-color: aliceblue; */
+}
+
+main #project #project-list .box{
+    min-height: 250px;
+    width: 100% ;
+    background-color: rgb(64, 64, 64);
+    border-radius: 10px;
+    margin-bottom: 5vh;
+}
+
+
+
+main #project #project-list .box .project-img{
+    height: 150px;
+    width: 100%;
+    border-radius: 10px 10px 0 0px;
+    background: url("../images/image2.jpg") no-repeat;
+    background-size: cover;
+}
+
+main #project #project-list .box .project-info{
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    padding: 20px;
+}
+
+main #project #project-list .box .project-code{
+    font-size: 15px;
+}
+
+main #project #project-list .box .project-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+
+
+/* =========== Project section end ============ */
+
+
+/* =========== Contact Me section ============ */
+
+        /* =========== contact form =========== */
+        #contact-me > div > .contact-details{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* background-color: aquamarine; */
+            /* justify-content: start; */
+            align-items: start;
+        }
+
+        #contact-me > div > .contact-details > div{
+            width: 100%;
+            padding: 20px;
+            /* background-color: aliceblue; */
+        }
+        #contact-me form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* background-color: aliceblue; */
+            width: 100%;
+        }
+
+        #contact-me form div{
+            width: 100%;
+            min-height: 70px;
+        }
+
+        #contact-me form > div  input{
+            width: 100%;
+            height: 50px;
+            border-radius: 5px;
+            padding-left: 20px;
+            margin-top: 5px;
+            background-color: var(--background-color);
+            border: none;
+            outline: none;
+            color: var(--text-color);
+        }
+
+        #contact-me form > div > input{
+            width: 100%;
+            height: 50px;
+            border-radius: 5px;
+            padding-left: 20px;
+            
+        }
+
+        #contact-me form > div > input[type = 'button']{
+            width: 100%;
+            height: 50px;
+            border-radius: 5px;
+            padding: 0;
+            background-color: var(--text-color);
+            color: var(--background-color);
+            font-size: 20px;
+        }
+
+
+        #contact-me form div .feedback{
+            height: 100px;
+        }
+
+        #contact-me form div textarea{
+            width: 100%;
+            height: 100px;
+            border-radius: 5px;
+            padding: 10px;
+            border: none;
+            outline: none;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        /* ========= contact form end ========== */
+
+        /* =========== contact form details ========== */
+
+        #contact-me > div > .contact-details > .project-links{
+            padding: 20px;
+            background-color: antiquewhite;
+        }
+        
+        /* =========== contact form details end ========== */
+
+/* =========== Contact Me section end ============ */
+
+
+
+/* ============ main content section end ============ */
+
+
+
+
+}
+
+
+
+
+/* =================== Responsive for mobile end ================= */
