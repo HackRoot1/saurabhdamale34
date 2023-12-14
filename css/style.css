@@ -125,6 +125,9 @@ main #main-content{
 
 main #main-content > #about-section > div > div > div{
     width: 50%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
     /* background: linear-gradient(to right, var(--box-color) 30%, rgb(87, 81, 81)); */
 }
 
