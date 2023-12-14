@@ -142,8 +142,8 @@ main #main-content > #about-section > div > div > div{
     align-items: center;
   }
   #content img{
-    width: 350px;
-    height: 350px;
+    width: 400px;
+    height: 400px;
   }
 
 
@@ -180,6 +180,7 @@ main #main-content > #about-section > div > div > div{
     font-size: 20px;
     background-color: rgb(58, 55, 215);
     padding: 10px;
+    margin-right: 10px;
     border-radius: 5px;
     color: white;
   }
@@ -561,6 +562,7 @@ main #project #project-list .box .project-links a{
             flex-direction: column-reverse;
             justify-content: start;
             align-items: start;
+            margin-bottom: 5vh;
         }
 
         main #main-content > #about-section > div > div > div{
@@ -858,7 +860,7 @@ main #project #project-list .box .project-links a{
         
         /* =========== contact form details end ========== */
 
-/* =========== Contact Me section end ============ */
+    /* =========== Contact Me section end ============ */
 
 
 

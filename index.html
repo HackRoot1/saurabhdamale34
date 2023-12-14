@@ -12,13 +12,45 @@
     <!-- ===== Iconscout CSS ====== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
+    <style>
+        #screen-mode{
+            background-color: #575757;
+            width: 70px;
+            height: 40px;
+            font-size: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+        }
+        #screen-mode div{
+            width: 50%;
+        }
+
+        #screen-mode div.moon{
+            background-color: rgb(207, 207, 207);
+            height: 35px;
+            width: 35px;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav>
             <div id = "title">Portfolio</div>
-            <div id = "sidebar-open" class="title">
+            <!-- <div id = "sidebar-open" class="title">
                 <i class="uil uil-bars"></i>
+            </div> -->
+            <div id = "screen-mode">
+                <div></div>
+                <div class = "moon">
+                    <i class="uil uil-moon" style="color: white;"></i>
+                </div>
             </div>
         </nav>
     </header>
@@ -56,25 +88,25 @@
             
             <div>
                 <a href="">
-                    <i class="uil uil-instagram"></i>
+                    <i class="uil uil-instagram" style = "color: purple;"></i>
                     <span>Instagram</span>
                 </a>
             </div>
             <div>
                 <a href="">
-                    <i class="uil uil-facebook-f"></i>
+                    <i class="uil uil-facebook-f"style = "color: blue;"></i>
                     <span>Facebook</span>
                 </a>
             </div>
             <div>
                 <a href="">
-                    <i class="uil uil-github"></i>
+                    <i class="uil uil-github" style="color : black"></i>
                     <span>GitHub</span>
                 </a>
             </div>
             <div>
                 <a href="">
-                    <i class="uil uil-twitter"></i>
+                    <i class="uil uil-twitter" style = "color: blue;"></i>
                     <span>Twitter</span>
                 </a>
             </div>
@@ -95,11 +127,15 @@
                                     Download CV
                                     <i class = "uil uil-download-alt"></i>
                                 </a>
+                                <a href="">
+                                    Resume
+                                    <i class = "uil uil-download-alt"></i>
+                                </a>
                             </span>
                         </div>
                         <div>
                             <div id = "content">
-                                <img src="images/profile.png" alt="">
+                                <img src="images/s-letter-logo-png-849.png" alt="">
                             </div>
                         </div>
                     </div>
