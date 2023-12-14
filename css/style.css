@@ -573,8 +573,8 @@ main #project #project-list .box .project-links a{
         #content {
             text-align: center;
             color: #fff;
-            height: 400px;
-            width: 400px;
+            height: 350px;
+            width: 350px;
             /* linear-gradient( -45deg, #bd34fe 50%, #47caff 50% ); */
             background: radial-gradient(circle at center,rgba(12, 8, 234, 0.416) ,rgb(92, 85, 230) ,rgb(58, 55, 215) , rgb(51, 66, 180) 0, rgb(31, 64, 135),rgb(42, 42, 42), rgb(42, 42, 42) 100%);
             background-blend-mode: multiply;
