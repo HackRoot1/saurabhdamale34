@@ -175,6 +175,15 @@ main #main-content > #about-section > div > div > div{
     color: rgb(58, 55, 215);
   }
 
+  #about-information .download-cv a{
+    text-decoration: none;
+    font-size: 20px;
+    background-color: rgb(58, 55, 215);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+  }
+
 main #main-content > section{
     min-height: 350px;
     width: 100%;
@@ -297,6 +306,10 @@ main #project #project-list .box{
     border-radius: 10px;
 }
 
+main #project #project-list .box .project-info div{
+    margin: 10px 0;
+}
+
 
 
 main #project #project-list .box .project-img{
@@ -347,6 +360,11 @@ main #project #project-list .box .project-links{
     flex-direction: row;
     justify-content: space-between;
     padding: 10px;
+}
+
+main #project #project-list .box .project-links a{
+    text-decoration: none;
+    color: var(--text-color);
 }
 
 
