@@ -115,9 +115,29 @@ main #main-content{
 
 /* =========== about section ============== */
 
-main #main-content > #about-section > div{
-    background: linear-gradient(to right, var(--box-color) 30%, rgb(87, 81, 81));
+main #main-content > #about-section > div > div > div{
+    width: 50%;
+    /* background: linear-gradient(to right, var(--box-color) 30%, rgb(87, 81, 81)); */
 }
+
+#content {
+    text-align: center;
+    color: #fff;
+    height: 400px;
+    width: 400px;
+    /* linear-gradient( -45deg, #bd34fe 50%, #47caff 50% ); */
+    background: radial-gradient(circle at center,rgba(12, 8, 234, 0.416) ,rgb(92, 85, 230) ,rgb(58, 55, 215) , rgb(51, 66, 180) 0, rgb(31, 64, 135),rgb(42, 42, 42), rgb(42, 42, 42) 100%);
+    background-blend-mode: multiply;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #content img{
+    width: 350px;
+    height: 350px;
+  }
+
 main #main-content > section{
     min-height: 350px;
     width: 100%;
@@ -410,6 +430,37 @@ main #project #project-list .box .project-links{
     }
 
 /* =========== about section ============== */
+
+    main #main-content > #about-section > div > div{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: start;
+        align-items: start;
+    }
+
+    main #main-content > #about-section > div > div > div{
+        width: 50%;
+        /* background: linear-gradient(to right, var(--box-color) 30%, rgb(87, 81, 81)); */
+    }
+
+    #content {
+        text-align: center;
+        color: #fff;
+        height: 400px;
+        width: 400px;
+        /* linear-gradient( -45deg, #bd34fe 50%, #47caff 50% ); */
+        background: radial-gradient(circle at center,rgba(12, 8, 234, 0.416) ,rgb(92, 85, 230) ,rgb(58, 55, 215) , rgb(51, 66, 180) 0, rgb(31, 64, 135),rgb(42, 42, 42), rgb(42, 42, 42) 100%);
+        background-blend-mode: multiply;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #content img{
+        width: 350px;
+        height: 350px;
+    }
+
     main #main-content > section{
         min-height: 350px;
         width: 100%;
@@ -420,15 +471,15 @@ main #project #project-list .box .project-links{
         align-items: center;
         margin: 5vh 0;
     }
-main #main-content > section > div{
-    /* height same as parent element */
-    min-height: 350px;
-    width: 100%;
-    background-color: var(--box-color);
-    display: flex;
-    flex-direction: column;
-    /* margin: 5vh 0; */
-}
+    main #main-content > section > div{
+        /* height same as parent element */
+        min-height: 350px;
+        width: 100%;
+        background-color: var(--box-color);
+        display: flex;
+        flex-direction: column;
+        /* margin: 5vh 0; */
+    }
 
 
 /* =========== about section end ============== */
