@@ -138,6 +138,35 @@ main #main-content > #about-section > div > div > div{
     height: 350px;
   }
 
+
+  #about-information{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+
+  #about-information span{
+    margin: 10px 0;
+  }
+  #about-information .title{
+    background-color: var(--background-color);
+    padding: 10px;
+    border-radius: 5px;
+    color: rgb(58, 55, 215);
+    font-size: 20px;
+  }
+  #about-information .name{
+    font-size: 50px;
+  }
+  #about-information .dev-title{
+    font-size: 40px;
+    background-color: var(--background-color);
+    padding: 10px;
+    border-radius: 5px;
+    color: rgb(58, 55, 215);
+  }
+
 main #main-content > section{
     min-height: 350px;
     width: 100%;
@@ -249,7 +278,31 @@ main #project #project-list .box .project-img{
     height: 150px;
     width: 100%;
     border-radius: 10px 10px 0 0px;
-    background: url("../images/image2.jpg") no-repeat;
+    /* background: url("../images/image2.jpg") no-repeat; */
+    /* background-size: cover; */
+}
+
+
+main #project #project-list .box .hms-project{
+    background: url("../images/hospital.jpg") no-repeat;
+    background-size: cover;
+}
+
+
+main #project #project-list .box .restaurant-project{
+    background: url("../images/dawat.jpg") no-repeat;
+    background-size: cover;
+}
+
+
+main #project #project-list .box .todolist-project{
+    background: url("../images/todolist.png") no-repeat;
+    background-size: cover;
+}
+
+
+main #project #project-list .box .weather-project{
+    background: url("../images/weather.jpg") no-repeat;
     background-size: cover;
 }
 
@@ -449,17 +502,18 @@ main #project #project-list .box .project-links{
         height: 400px;
         width: 400px;
         /* linear-gradient( -45deg, #bd34fe 50%, #47caff 50% ); */
-        background: radial-gradient(circle at center,rgba(12, 8, 234, 0.416) ,rgb(92, 85, 230) ,rgb(58, 55, 215) , rgb(51, 66, 180) 0, rgb(31, 64, 135),rgb(77, 76, 76), rgb(91, 88, 88), rgb(42, 42, 42) 100%);
+        background: radial-gradient(circle at center,rgba(12, 8, 234, 0.416) ,rgb(92, 85, 230) ,rgb(58, 55, 215) , rgb(51, 66, 180) 0, rgb(31, 64, 135),rgb(42, 42, 42), rgb(42, 42, 42) 100%);
         background-blend-mode: multiply;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-    #content img{
+      }
+      #content img{
         width: 350px;
         height: 350px;
-    }
+      }
+    
 
     main #main-content > section{
         min-height: 350px;
@@ -570,31 +624,33 @@ main #project #project-list .box{
 
 
 
-main #project #project-list .box .project-img{
-    height: 150px;
-    width: 100%;
-    border-radius: 10px 10px 0 0px;
-    background: url("../images/image2.jpg") no-repeat;
-    background-size: cover;
-}
+        main #project #project-list .box .project-img{
+            height: 150px;
+            width: 100%;
+            border-radius: 10px 10px 0 0px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* backdrop-filter: blur(10px); */
+        }
 
-main #project #project-list .box .project-info{
-    display: block;
-    width: 100%;
-    font-size: 20px;
-    padding: 20px;
-}
+        main #project #project-list .box .project-info{
+            display: block;
+            width: 100%;
+            font-size: 20px;
+            padding: 20px;
+        }
 
-main #project #project-list .box .project-code{
-    font-size: 15px;
-}
+        main #project #project-list .box .project-code{
+            font-size: 15px;
+        }
 
-main #project #project-list .box .project-links{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px;
-}
+        main #project #project-list .box .project-links{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 10px;
+        }
 
 
 
