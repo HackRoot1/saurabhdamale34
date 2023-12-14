@@ -647,14 +647,31 @@ main #project #project-list .box .project-links a{
             font-size: 20px;
         }
         #about-information .name{
-            font-size: 50px;
+            font-size: 30px;
         }
         #about-information .dev-title{
-            font-size: 40px;
+            font-size: 25px;
             background-color: var(--background-color);
             padding: 10px;
             border-radius: 5px;
             color: rgb(58, 55, 215);
+        }
+
+        #about-information .download-cv{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        #about-information .download-cv a{
+            text-decoration: none;
+            font-size: 20px;
+            background-color: rgb(58, 55, 215);
+            padding: 10px;
+            margin-right: 0;
+            border-radius: 5px;
+            color: white;
         }
 
 
@@ -712,7 +729,7 @@ main #project #project-list .box .project-links a{
             width: 100%;
             min-height: 200px;
             background-color: var(--box-color);
-            border: 1px dashed var(--text-color);
+            border: 1px solid var(--text-color);
             margin: 10px 0;
             /* display: flex;
             flex-direction: column; */
@@ -902,7 +919,7 @@ main #project #project-list .box .project-links a{
         #contact-me .contact-details .contact-links > div{
             margin: 20px 0;
             width: 100%;
-            font-size: 25px;
+            font-size: 20px;
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
