@@ -6,30 +6,33 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Arial', sans-serif;
       overflow: hidden;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       height: 100vh;
-      background-color: #000;
+      background-color: #282c34; /* Background color similar to Vite.js website */
     }
 
-    #content {
-      text-align: center;
-      color: #fff;
-      height: 400px;
-      width: 400px;
-      z-index: 1;
-      /* linear-gradient( -45deg, #bd34fe 50%, #47caff 50% ); */
-      background: radial-gradient(circle at center,rgb(12, 8, 234) ,rgb(32, 21, 223) ,rgb(27, 25, 183) , rgb(32, 45, 142) 0, rgb(17, 38, 83),rgb(0, 0, 0), rgb(0, 0, 0) 100%);
-      background-blend-mode: multiply;
+    .circle-background {
+      position: absolute;
+      margin: 200px 0 0px 200px;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(
+        circle,
+        #61dafb,
+        #bb2222
+      ),
+      linear-gradient(45deg, #282c34 50%, #61dafb);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
     }
   </style>
-  <title>Radial Background Effect</title>
 </head>
 <body>
-  <div id="content">
-  </div>
+  <div class="circle-background"></div>
+  <!-- Your content goes here -->
+  <h1>Your Logo or Content</h1>
 </body>
 </html>

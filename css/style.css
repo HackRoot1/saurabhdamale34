@@ -28,10 +28,18 @@ header nav{
     background-color: #000;
     height: 70px;
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
 }
 
 header nav #title{
+    color: var(--text-color);
+    font-size: 25px;
+}
+
+header nav .title{
     color: var(--text-color);
     margin-left: 50px;
     font-size: 25px;
@@ -219,8 +227,8 @@ main #skills div.skills-info{
 main #skills div.skills-info .box{
     width: calc(calc(100% / 3) - 10px);
     min-height: 200px;
-    background-color: var(--box-color);
-    border: 1px dashed var(--text-color);
+    /* background-color: var(--background-color); */
+    border: 1px solid var(--text-color);
     /* display: flex;
     flex-direction: column; */
 }
@@ -248,6 +256,23 @@ main #skills div.skills-info .box .item-list .items{
     border: 1px solid rgb(84, 84, 84);
     padding: 10px;
     border-radius: 5px;
+}
+
+main #skills div.skills-info .box .item-list :nth-child(1){
+    border: 1px solid #bd34fe;
+    background-color: #bd34fe;
+    color: White;
+}
+/* linear-gradient( -45deg, #bd34fe 50%, #47caff 50% ); */
+main #skills div.skills-info .box .item-list :nth-child(2){
+    border: 1px solid #47caff;
+    background-color: #47caff;
+    color: white;
+}
+main #skills div.skills-info .box .item-list :nth-child(3){
+    border: 1px solid blue;
+    background-color: blue;
+    color: white;
 }
 
 
@@ -445,182 +470,252 @@ main #project #project-list .box .project-links{
         flex-direction: row;
     }
     
-    main #sidebar{
-        display: none;
-    }
+        main #sidebar{
+            display: none;
+        }
+
+        main #sidebar{
+            width: 100vw;
+            margin: 0;
+            height: 100vh;
+            border-radius: 0;
+            background-color: var(--box-color);
+        }
+
+
+        main #sidebar .sidebar-title{
+            margin-left: -20px;
+        }
+        main #sidebar div{
+            height: 50px;
+            width: 100%;
+            margin: 5px 0;
+            font-size: 30px;
+            color: var(--text-color);
+        }
+
+        main #sidebar div a{
+            text-decoration: none;
+            color: var(--text-color);
+        }
+
+        main #sidebar :is(:not(div:hover), .sidebar-title){
+            transform: translateY(3px);
+        }
+
+
+
+        
+        /* ============ main content section ============= */
+        main #main-content{
+            margin-left: 0;
+            width: 100vw;
+            min-height: 100vh;
+            background-color: var(--background-color);
+            margin-right: 0px;
+        }
+
+
+        /* width */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: var(--box-color); 
+        }
     
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: var(--background-color); 
+        }
+        
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #000; 
+        }
+
+    /* =========== about section ============== */
+
+        main #main-content > #about-section > div > div{
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: start;
+            align-items: start;
+        }
+
+        main #main-content > #about-section > div > div > div{
+            width: 100%;
+            /* background: linear-gradient(to right, var(--box-color) 30%, rgb(87, 81, 81)); */
+        }
+
+        #content {
+            text-align: center;
+            color: #fff;
+            height: 400px;
+            width: 400px;
+            /* linear-gradient( -45deg, #bd34fe 50%, #47caff 50% ); */
+            background: radial-gradient(circle at center,rgba(12, 8, 234, 0.416) ,rgb(92, 85, 230) ,rgb(58, 55, 215) , rgb(51, 66, 180) 0, rgb(31, 64, 135),rgb(42, 42, 42), rgb(42, 42, 42) 100%);
+            background-blend-mode: multiply;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #content img{
+            width: 350px;
+            height: 350px;
+        }
+        
+
+        #main-content #about-section{
+            margin-top: 0;
+        }
+       
+        #main-content #contact-me{
+            margin-bottom: 0;
+        }
 
 
-    
-    /* ============ main content section ============= */
-    main #main-content{
-        margin-left: 0;
-        width: 100vw;
-        min-height: 100vh;
-        background-color: var(--background-color);
-        margin-right: 0px;
-    }
+        #about-information{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #about-information span{
+            margin: 10px 0;
+            display: block;
+        }
+        #about-information .title{
+            background-color: var(--background-color);
+            padding: 10px;
+            border-radius: 5px;
+            color: rgb(58, 55, 215);
+            font-size: 20px;
+        }
+        #about-information .name{
+            font-size: 50px;
+        }
+        #about-information .dev-title{
+            font-size: 40px;
+            background-color: var(--background-color);
+            padding: 10px;
+            border-radius: 5px;
+            color: rgb(58, 55, 215);
+        }
 
 
-    /* width */
-    ::-webkit-scrollbar {
-        width: 10px;
-    }
-    
-    /* Track */
-    ::-webkit-scrollbar-track {
-        background: var(--box-color); 
-    }
-   
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-        background: var(--background-color); 
-    }
-    
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-        background: #000; 
-    }
-
-/* =========== about section ============== */
-
-    main #main-content > #about-section > div > div{
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: start;
-        align-items: start;
-    }
-
-    main #main-content > #about-section > div > div > div{
-        width: 50%;
-        /* background: linear-gradient(to right, var(--box-color) 30%, rgb(87, 81, 81)); */
-    }
-
-    #content {
-        text-align: center;
-        color: #fff;
-        height: 400px;
-        width: 400px;
-        /* linear-gradient( -45deg, #bd34fe 50%, #47caff 50% ); */
-        background: radial-gradient(circle at center,rgba(12, 8, 234, 0.416) ,rgb(92, 85, 230) ,rgb(58, 55, 215) , rgb(51, 66, 180) 0, rgb(31, 64, 135),rgb(42, 42, 42), rgb(42, 42, 42) 100%);
-        background-blend-mode: multiply;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      #content img{
-        width: 350px;
-        height: 350px;
-      }
-    
-
-    main #main-content > section{
-        min-height: 350px;
-        width: 100%;
-        background-color: var(--background-color);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        margin: 5vh 0;
-    }
-    main #main-content > section > div{
-        /* height same as parent element */
-        min-height: 350px;
-        width: 100%;
-        background-color: var(--box-color);
-        display: flex;
-        flex-direction: column;
-        /* margin: 5vh 0; */
-    }
+        main #main-content > section{
+            min-height: 350px;
+            width: 100%;
+            background-color: var(--background-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 5vh 0;
+        }
+        main #main-content > section > div{
+            /* height same as parent element */
+            min-height: 350px;
+            width: 100%;
+            background-color: var(--box-color);
+            display: flex;
+            flex-direction: column;
+            /* margin: 5vh 0; */
+        }
 
 
-/* =========== about section end ============== */
-/* =========== skills section ============ */
-
-
-
-main #main-content > section > div > div{
-    min-height: 100px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    padding: 0 50px;
-    font-size: 30px;
-    color: var(--text-color);
-}
-main #main-content > section > div > :not(:nth-child(1)){
-    margin-bottom: 5vh;
-}
-
-main #skills div.skills-info{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    /* align-items: center; */
-}
-
-main #skills div.skills-info .box{
-    width: 100%;
-    min-height: 200px;
-    background-color: var(--box-color);
-    border: 1px dashed var(--text-color);
-    margin: 10px 0;
-    /* display: flex;
-    flex-direction: column; */
-}
-
-
-main #skills div.skills-info .box .title{
-    font-size: 20px;
-    text-align: center;
-    margin-top: 10px;
-}
-
-main #skills div.skills-info .box .item-list{
-    font-size: 20px;
-    list-style: none;
-    padding: 10px;
-    /* border: 1px solid red; */
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: auto auto ;
-    column-gap: 5px;
-    row-gap: 5px;
-}
-
-main #skills div.skills-info .box .item-list .items{
-    border: 1px solid rgb(84, 84, 84);
-    padding: 10px;
-    border-radius: 5px;
-}
+        /* =========== about section end ============== */
+        /* =========== skills section ============ */
 
 
 
+        main #main-content > section > div > div{
+            min-height: 100px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            padding: 0 50px;
+            font-size: 30px;
+            color: var(--text-color);
+        }
 
-/* =========== skills section ============ */
+        main #main-content > section > div > :not(:nth-child(1)){
+            margin-bottom: 5vh;
+        }
 
-/* =========== Project section ============ */
+        main #skills div.skills-info{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            /* align-items: center; */
+        }
 
-main #project #project-list{
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-    /* background-color: aliceblue; */
-}
+        main #skills div.skills-info .box{
+            width: 100%;
+            min-height: 200px;
+            background-color: var(--box-color);
+            border: 1px dashed var(--text-color);
+            margin: 10px 0;
+            /* display: flex;
+            flex-direction: column; */
+        }
 
-main #project #project-list .box{
-    min-height: 250px;
-    width: 100% ;
-    background-color: rgb(64, 64, 64);
-    border-radius: 10px;
-    margin-bottom: 5vh;
-}
+
+        main #skills div.skills-info .box .title{
+            font-size: 20px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        main #skills div.skills-info .box .item-list{
+            font-size: 20px;
+            list-style: none;
+            padding: 10px;
+            /* border: 1px solid red; */
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: auto auto ;
+            column-gap: 5px;
+            row-gap: 5px;
+        }
+
+        main #skills div.skills-info .box .item-list .items{
+            border: 1px solid rgb(84, 84, 84);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+
+
+
+        /* =========== skills section ============ */
+
+        /* =========== Project section ============ */
+
+        main #project #project-list{
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            /* background-color: aliceblue; */
+        }
+
+        main #project #project-list .box{
+            min-height: 250px;
+            width: 100% ;
+            background-color: rgb(64, 64, 64);
+            border-radius: 10px;
+            margin-bottom: 5vh;
+        }
 
 
 
