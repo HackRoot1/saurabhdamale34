@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -6,15 +8,45 @@
 
 
 :root{
+    
+    --primary-color: #0E4BF1;
+    --panel-color: #FFF;
+    --text-color: #000;
+    --black-light-color: #707070;
+    --border-color: #E6E5E5;
+    --toggle-color: #DDD;
+    --box1-color: #4DA3FF;
+    --box2-color: #FF36AC;
+    --box3-color: #37D1FC;
+    --title-icon-color: #fff;
+    --color1 : rgb(42, 42, 42);
+
+    /* ====== Transition ====== */
+
+    --tran-05: all 0.5s ease;
+    --tran-03: all 0.3s ease;
+    --tran-02: all 0.2s ease;
     --background-color : #181616;
     --text-color: rgb(160, 161, 162);
     --box-color: rgb(42, 42, 42);
 }
 
 
+
 body{
     background-color: var(--background-color);
 }
+
+
+body.dark{
+    /* ======= Colors ======= */
+
+    --background-color : #e7d5d5;
+    --text-color: rgb(95, 96, 96);
+    --box-color: rgb(207, 207, 207);
+    background-color: var(--background-color);
+}
+
 
 /* ======= navigation bar ========= */
 
@@ -45,6 +77,53 @@ header nav .title{
     font-size: 25px;
 }
 
+
+header nav .mode{
+    /* padding-left: 20px; */
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    background-color: var(--text-color);
+}
+
+.mode-toggle{
+    position: absolute;
+    right: 14px;
+    height: 50px;
+    min-width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* background-color: #47caff; */
+}
+
+.mode-toggle .switch{
+    position: relative;
+    display: inline-block;
+    height: 22px;
+    width: 40px;
+    border-radius: 25px;
+    background-color: var(--toggle-color);
+}
+
+
+.switch:before{
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 15px;
+    width: 15px;
+    background-color: var(--panel-color);
+    border-radius: 50%;
+    transition: var(--tran-03);
+}
+
+body.dark .switch:before{
+    left: 20px;
+}
 
 /* ========== sidebar design ========== */
 
@@ -133,7 +212,7 @@ main #main-content > #about-section > div > div > div{
 
 #content {
     text-align: center;
-    color: #fff;
+    color: var(--text-color);
     height: 400px;
     width: 400px;
     /* linear-gradient( -45deg, #bd34fe 50%, #47caff 50% ); */
@@ -144,6 +223,20 @@ main #main-content > #about-section > div > div > div{
     justify-content: center;
     align-items: center;
   }
+
+    body.dark #content {
+        text-align: center;
+        color: var(--text-color);
+        height: 400px;
+        width: 400px;
+        background: radial-gradient(circle at center,rgb(13, 10, 175) ,rgb(46, 35, 255) ,rgb(72, 69, 255) , rgb(104, 119, 255) 0, rgb(159, 186, 255),rgb(207, 207, 207), transparent 100%);
+        /* background-blend-mode: multiply; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
   #content img{
     width: 400px;
     height: 400px;
@@ -306,8 +399,13 @@ main #project #project-list{
 main #project #project-list .box{
     min-height: 250px;
     width: calc(100% / 4 - 10px);
-    background-color: rgb(64, 64, 64);
+    background-color: var(--background-color);
     border-radius: 10px;
+}
+
+body.dark main #project #project-list .box{
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 main #project #project-list .box .project-info div{
