@@ -41,8 +41,8 @@ body{
 body.dark{
     /* ======= Colors ======= */
 
-    --background-color : #e7d5d5;
-    --text-color: rgb(95, 96, 96);
+    --background-color : #ebefff;
+    --text-color: rgb(0, 0, 0);
     --box-color: rgb(207, 207, 207);
     background-color: var(--background-color);
 }
@@ -56,8 +56,11 @@ header{
     position: sticky;
     top: 0;
 }
+
+
 header nav{
-    background-color: #000;
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--text-color);
     height: 70px;
     display: flex;
     flex-direction: row;
@@ -104,7 +107,7 @@ header nav .mode{
     height: 22px;
     width: 40px;
     border-radius: 25px;
-    background-color: var(--toggle-color);
+    background-color: var(--text-color);
 }
 
 
@@ -116,7 +119,7 @@ header nav .mode{
     transform: translateY(-50%);
     height: 15px;
     width: 15px;
-    background-color: var(--panel-color);
+    background-color: var(--box-color);
     border-radius: 50%;
     transition: var(--tran-03);
 }
