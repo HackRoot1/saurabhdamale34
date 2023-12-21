@@ -1,9 +1,17 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
 
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 
@@ -53,7 +61,6 @@ body.dark{
 
 header{
     overflow: hidden;
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
 }
@@ -63,10 +70,19 @@ header nav{
     background-color: var(--background-color);
     border-bottom: 1px solid var(--text-color);
     height: 70px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 0 50px;
 }
 
@@ -84,8 +100,12 @@ header nav .title{
 
 header nav .mode{
     /* padding-left: 20px; */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     white-space: nowrap;
     background-color: var(--text-color);
 }
@@ -95,9 +115,15 @@ header nav .mode{
     right: 14px;
     height: 50px;
     min-width: 45px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     cursor: pointer;
     /* background-color: #47caff; */
 }
@@ -117,11 +143,15 @@ header nav .mode{
     position: absolute;
     left: 5px;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
     height: 15px;
     width: 15px;
     background-color: var(--box-color);
     border-radius: 50%;
+    -webkit-transition: var(--tran-03);
+    -o-transition: var(--tran-03);
     transition: var(--tran-03);
 }
 
@@ -132,8 +162,13 @@ body.dark .switch:before{
 /* ========== sidebar design ========== */
 
 main{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
 }
 
 main #sidebar{
@@ -142,11 +177,20 @@ main #sidebar{
     height: calc(90vh - 70px);
     background-color: var(--box-color);
     border-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin: 5vh;
-    align-items: start;
-    justify-content: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
     padding-left: 50px;
     padding-top: 50px;
 }
@@ -168,7 +212,9 @@ main #sidebar div a{
 
 main #sidebar :is(:not(div:hover), .sidebar-title){
     /* font-size: 25px; */
-    transform: translateY(3px);
+    -webkit-transform: translateY(3px);
+        -ms-transform: translateY(3px);
+            transform: translateY(3px);
 }
 
 /* ========= sidebar design end =========== */
@@ -208,8 +254,12 @@ main #main-content{
 
 main #main-content > #about-section > div > div > div{
     width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     /* align-items: center; */
     /* background: linear-gradient(to right, var(--box-color) 30%, rgb(87, 81, 81)); */
 }
@@ -220,12 +270,22 @@ main #main-content > #about-section > div > div > div{
     height: 400px;
     width: 400px;
     /* linear-gradient( -45deg, #bd34fe 50%, #47caff 50% ); */
+    background: -o-radial-gradient(center,circle,rgba(12, 8, 234, 0.416) ,rgb(92, 85, 230) ,rgb(58, 55, 215) , rgb(51, 66, 180) 0, rgb(31, 64, 135),rgb(42, 42, 42), rgb(42, 42, 42) 100%);
     background: radial-gradient(circle at center,rgba(12, 8, 234, 0.416) ,rgb(92, 85, 230) ,rgb(58, 55, 215) , rgb(51, 66, 180) 0, rgb(31, 64, 135),rgb(42, 42, 42), rgb(42, 42, 42) 100%);
     background-blend-mode: multiply;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
     body.dark #content {
@@ -233,12 +293,22 @@ main #main-content > #about-section > div > div > div{
         color: var(--text-color);
         height: 400px;
         width: 400px;
+        background: -o-radial-gradient(center,circle,rgb(13, 10, 175) ,rgb(46, 35, 255) ,rgb(72, 69, 255) , rgb(104, 119, 255) 0, rgb(159, 186, 255),rgb(207, 207, 207), transparent 100%);
         background: radial-gradient(circle at center,rgb(13, 10, 175) ,rgb(46, 35, 255) ,rgb(72, 69, 255) , rgb(104, 119, 255) 0, rgb(159, 186, 255),rgb(207, 207, 207), transparent 100%);
         /* background-blend-mode: multiply; */
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
   #content img{
@@ -248,10 +318,19 @@ main #main-content > #about-section > div > div > div{
 
 
   #about-information{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
   }
 
   #about-information span{
@@ -289,10 +368,19 @@ main #main-content > section{
     min-height: 350px;
     width: 100%;
     background-color: var(--background-color);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: 5vh 0;
 }
 main #main-content > section > div{
@@ -300,8 +388,13 @@ main #main-content > section > div{
     min-height: 350px;
     width: 100%;
     background-color: var(--box-color);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     /* margin: 5vh 0; */
 }
 
@@ -314,9 +407,15 @@ main #main-content > section > div{
 main #main-content > section > div > div{
     min-height: 100px;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
     padding: 0 50px;
     font-size: 30px;
     color: var(--text-color);
@@ -326,9 +425,16 @@ main #main-content > section > div > :not(:nth-child(1)){
 }
 
 main #skills div.skills-info{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-top: 10px;
     margin-bottom: 20px;
     /* align-items: center; */
@@ -356,9 +462,13 @@ main #skills div.skills-info .box .item-list{
     padding: 10px;
     /* border: 1px solid red; */
     margin-top: 10px;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: auto 5px auto 5px auto;
     grid-template-columns: auto auto auto;
-    column-gap: 5px;
+    -webkit-column-gap: 5px;
+       -moz-column-gap: 5px;
+            column-gap: 5px;
     row-gap: 5px;
 }
 
@@ -393,10 +503,19 @@ main #skills div.skills-info .box .item-list :nth-child(3){
 /* =========== Project section ============ */
 
 main #project #project-list{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     /* background-color: aliceblue; */
 }
 
@@ -414,6 +533,7 @@ body.dark main #project #project-list .box{
 
 main #project #project-list .box .project-info div{
     margin: 10px 0;
+    height: 30px;
 }
 
 
@@ -445,8 +565,8 @@ main #project #project-list .box .todolist-project{
 }
 
 
-main #project #project-list .box .weather-project{
-    background: url("../images/weather.jpg") no-repeat;
+main #project #project-list .box .tic_tac_toe-project{
+    background: url("../images/tic_tac_toe.png") no-repeat;
     background-size: cover;
 }
 
@@ -462,9 +582,16 @@ main #project #project-list .box .project-code{
 }
 
 main #project #project-list .box .project-links{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 10px;
 }
 
@@ -483,11 +610,18 @@ main #project #project-list .box .project-links a{
         /* =========== contact form =========== */
         #contact-me > div > .contact-details{
             width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: row;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
             /* background-color: aquamarine; */
             /* justify-content: start; */
-            align-items: start;
+            -webkit-box-align: start;
+                -ms-flex-align: start;
+                    align-items: start;
         }
 
         #contact-me > div > .contact-details > div{
@@ -496,10 +630,19 @@ main #project #project-list .box .project-links a{
             /* background-color: aliceblue; */
         }
         #contact-me form{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             /* background-color: aliceblue; */
             width: 100%;
         }
@@ -564,10 +707,19 @@ main #project #project-list .box .project-links a{
         }
         
         #contact-me .contact-details .contact-links{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: start;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: start;
+                -ms-flex-align: start;
+                    align-items: start;
         }
         
         
@@ -575,15 +727,28 @@ main #project #project-list .box .project-links a{
             margin: 20px 0;
             width: 100%;
             font-size: 25px;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-items: center;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: space-evenly;
+                -ms-flex-pack: space-evenly;
+                    justify-content: space-evenly;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
         }
         
         #contact-me .contact-details .contact-links > :is(div:nth-child(1), div:nth-child(2)){
             
-            justify-content: start;
+            -webkit-box-pack: start;
+            
+                -ms-flex-pack: start;
+            
+                    justify-content: start;
         }
         
         #contact-me .contact-details .contact-links > div hr{
@@ -613,14 +778,18 @@ main #project #project-list .box .project-links a{
 
     header{
         overflow: hidden;
-        position: -webkit-sticky;
         position: sticky;
         top: 0;
     }
 
     main{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
     }
     
         main #sidebar{
@@ -653,7 +822,9 @@ main #project #project-list .box .project-links a{
         }
 
         main #sidebar :is(:not(div:hover), .sidebar-title){
-            transform: translateY(3px);
+            -webkit-transform: translateY(3px);
+                -ms-transform: translateY(3px);
+                    transform: translateY(3px);
         }
 
 
@@ -692,10 +863,19 @@ main #project #project-list .box .project-links a{
     /* =========== about section ============== */
 
         main #main-content > #about-section > div > div{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column-reverse;
-            justify-content: start;
-            align-items: start;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: reverse;
+                -ms-flex-direction: column-reverse;
+                    flex-direction: column-reverse;
+            -webkit-box-pack: start;
+                -ms-flex-pack: start;
+                    justify-content: start;
+            -webkit-box-align: start;
+                -ms-flex-align: start;
+                    align-items: start;
             margin-bottom: 5vh;
         }
 
@@ -710,12 +890,22 @@ main #project #project-list .box .project-links a{
             height: 350px;
             width: 350px;
             /* linear-gradient( -45deg, #bd34fe 50%, #47caff 50% ); */
+            background: -o-radial-gradient(center,circle,rgba(12, 8, 234, 0.416) ,rgb(92, 85, 230) ,rgb(58, 55, 215) , rgb(51, 66, 180) 0, rgb(31, 64, 135),rgb(42, 42, 42), rgb(42, 42, 42) 100%);
             background: radial-gradient(circle at center,rgba(12, 8, 234, 0.416) ,rgb(92, 85, 230) ,rgb(58, 55, 215) , rgb(51, 66, 180) 0, rgb(31, 64, 135),rgb(42, 42, 42), rgb(42, 42, 42) 100%);
             background-blend-mode: multiply;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
         }
         #content img{
             width: 350px;
@@ -734,10 +924,19 @@ main #project #project-list .box .project-links a{
 
         #about-information{
             width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
         }
 
         #about-information span{
@@ -764,9 +963,16 @@ main #project #project-list .box .project-links a{
 
         #about-information .download-cv{
             width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
         }
 
         #about-information .download-cv a{
@@ -784,10 +990,19 @@ main #project #project-list .box .project-links a{
             min-height: 350px;
             width: 100%;
             background-color: var(--background-color);
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: space-evenly;
+                -ms-flex-pack: space-evenly;
+                    justify-content: space-evenly;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             margin: 5vh 0;
         }
         main #main-content > section > div{
@@ -795,8 +1010,13 @@ main #project #project-list .box .project-links a{
             min-height: 350px;
             width: 100%;
             background-color: var(--box-color);
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
             /* margin: 5vh 0; */
         }
 
@@ -809,9 +1029,15 @@ main #project #project-list .box .project-links a{
         main #main-content > section > div > div{
             min-height: 100px;
             width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            align-items: center;
-            justify-content: start;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: start;
+                -ms-flex-pack: start;
+                    justify-content: start;
             padding: 0 50px;
             font-size: 30px;
             color: var(--text-color);
@@ -822,9 +1048,16 @@ main #project #project-list .box .project-links a{
         }
 
         main #skills div.skills-info{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
             margin-top: 10px;
             margin-bottom: 20px;
             /* align-items: center; */
@@ -853,9 +1086,13 @@ main #project #project-list .box .project-links a{
             padding: 10px;
             /* border: 1px solid red; */
             margin-top: 10px;
+            display: -ms-grid;
             display: grid;
+            -ms-grid-columns: auto 5px auto;
             grid-template-columns: auto auto ;
-            column-gap: 5px;
+            -webkit-column-gap: 5px;
+               -moz-column-gap: 5px;
+                    column-gap: 5px;
             row-gap: 5px;
         }
 
@@ -873,10 +1110,19 @@ main #project #project-list .box .project-links a{
         /* =========== Project section ============ */
 
         main #project #project-list{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
-            justify-content: start;
-            align-items: start;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: start;
+                -ms-flex-pack: start;
+                    justify-content: start;
+            -webkit-box-align: start;
+                -ms-flex-align: start;
+                    align-items: start;
             /* background-color: aliceblue; */
         }
 
@@ -912,9 +1158,16 @@ main #project #project-list .box .project-links a{
         }
 
         main #project #project-list .box .project-links{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
             padding: 10px;
         }
 
@@ -928,11 +1181,18 @@ main #project #project-list .box .project-links a{
         /* =========== contact form =========== */
         #contact-me > div > .contact-details{
             width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column-reverse;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: reverse;
+                -ms-flex-direction: column-reverse;
+                    flex-direction: column-reverse;
             /* background-color: aquamarine; */
             /* justify-content: start; */
-            align-items: start;
+            -webkit-box-align: start;
+                -ms-flex-align: start;
+                    align-items: start;
         }
 
         #contact-me > div > .contact-details > div{
@@ -941,10 +1201,19 @@ main #project #project-list .box .project-links a{
             /* background-color: aliceblue; */
         }
         #contact-me form{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             /* background-color: aliceblue; */
             width: 100%;
         }
@@ -1010,14 +1279,28 @@ main #project #project-list .box .project-links a{
         }
 
         #contact-me .contact-details{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column-reverse;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: reverse;
+                -ms-flex-direction: column-reverse;
+                    flex-direction: column-reverse;
         }
         #contact-me .contact-details .contact-links{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: start;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: start;
+                -ms-flex-align: start;
+                    align-items: start;
         }
         
         
@@ -1025,10 +1308,19 @@ main #project #project-list .box .project-links a{
             margin: 20px 0;
             width: 100%;
             font-size: 20px;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-items: center;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: space-evenly;
+                -ms-flex-pack: space-evenly;
+                    justify-content: space-evenly;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
         }
 
         #contact-me .contact-details .contact-links i{
@@ -1037,7 +1329,11 @@ main #project #project-list .box .project-links a{
         
         #contact-me .contact-details .contact-links > :is(div:nth-child(1), div:nth-child(2)){
             
-            justify-content: start;
+            -webkit-box-pack: start;
+            
+                -ms-flex-pack: start;
+            
+                    justify-content: start;
         }
         
         #contact-me .contact-details .contact-links > div hr{
@@ -1062,4 +1358,17 @@ main #project #project-list .box .project-links a{
 
 
 
-/* =================== Responsive for mobile end ================= */
+/* =================== Responsive for mobile end ================= */.example {
+    display: -ms-grid;
+    display: grid;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
+}
