@@ -796,39 +796,7 @@ main #project #project-list .box .project-links a{
             display: none;
         }
 
-        main #sidebar{
-            width: 100vw;
-            margin: 0;
-            height: 100vh;
-            border-radius: 0;
-            background-color: var(--box-color);
-        }
-
-
-        main #sidebar .sidebar-title{
-            margin-left: -20px;
-        }
-        main #sidebar div{
-            height: 50px;
-            width: 100%;
-            margin: 5px 0;
-            font-size: 30px;
-            color: var(--text-color);
-        }
-
-        main #sidebar div a{
-            text-decoration: none;
-            color: var(--text-color);
-        }
-
-        main #sidebar :is(:not(div:hover), .sidebar-title){
-            -webkit-transform: translateY(3px);
-                -ms-transform: translateY(3px);
-                    transform: translateY(3px);
-        }
-
-
-
+        
         
         /* ============ main content section ============= */
         main #main-content{
@@ -954,7 +922,7 @@ main #project #project-list .box .project-links a{
             font-size: 30px;
         }
         #about-information .dev-title{
-            font-size: 25px;
+            font-size: 20px;
             background-color: var(--background-color);
             padding: 10px;
             border-radius: 5px;
@@ -977,7 +945,7 @@ main #project #project-list .box .project-links a{
 
         #about-information .download-cv a{
             text-decoration: none;
-            font-size: 20px;
+            font-size: 15px;
             background-color: rgb(58, 55, 215);
             padding: 10px;
             margin-right: 0;
