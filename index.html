@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
 
-        
+    <!-- ========== Third party email.js is attached ============ -->
+    <!-- ======== email.js cdn link =========== -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
 
     <!-- ======== jquery link ========= -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -328,7 +331,7 @@
                             </div>
                         
                             <div>
-                                E-mail Address : damalesaurabh34@gmail.com
+                                E-mail Address : saurabh.damale.developer@gmail.com
                             </div>
 
                             <div>
@@ -354,21 +357,21 @@
 
                         <div>
 
-                            <form action="">
+                            <form id = "form-info">
                                 <div>
                                     <div>
-                                        <input type="text" id = "fname" placeholder="Enter Your First Name.....">
-                                        <input type="text" id = "lname" placeholder="Enter Your Last Name.....">
+                                        <input type="text" name = "fname" id = "fname" placeholder="Enter Your First Name.....">
+                                        <input type="text" name = "lname" id = "lname" placeholder="Enter Your Last Name.....">
                                     </div>
                                 </div>
                                 <div>
-                                    <input type="email" name="email" id="" placeholder="Enter Your E-mail Address.....">
+                                    <input type="email" name="email" id="email" placeholder="Enter Your E-mail Address.....">
                                 </div>
                                 <div class = "feedback">
-                                    <textarea name="" id="" cols="30" rows="5" placeholder="Give Me Some Feedback Here...."></textarea>
+                                    <textarea name="feedback" id="feedback" cols="30" rows="5" placeholder="Give Me Some Feedback Here...."></textarea>
                                 </div>
                                 <div>
-                                    <input type="button" value="Submit">
+                                    <input type="submit" value="Submit" id = "form-info-btn">
                                 </div>
                             </form>
                         </div>
@@ -386,10 +389,39 @@
     <script src="js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("A8WOpcYrB7cNM98T7");
+    })();
+    </script>
+
     <script>
         $(document).ready(function(){
 
-            
+            $("#form-info").on("submit", function(e){
+                e.preventDefault(); // Prevent the default form submission
+
+                // alert("Submitted");
+                // let info = $(this).serialize();
+                // let formData = $(this).serialize();
+
+                let formData = {
+                    fname : $("#fname").val(),
+                    lname : $("#lname").val(),
+                    email : $("#email").val(),
+                    feedback : $("#feedback").val()
+                }
+                emailjs.send("service_ex9672a", "template_tua6e6k", formData)
+                    .then(function(response) {
+                        console.log("Email sent successfully:", response);
+                    }, function(error) {
+                        console.error("Error sending email:", error);
+                });
+                
+            });
         });
     </script>
 </body>
