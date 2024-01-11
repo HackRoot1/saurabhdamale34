@@ -360,8 +360,8 @@
                             <form id = "form-info">
                                 <div>
                                     <div>
-                                        <input type="text" name = "fname" id = "fname" placeholder="Enter Your First Name.....">
-                                        <input type="text" name = "lname" id = "lname" placeholder="Enter Your Last Name.....">
+                                        <input type="text" name = "fname" id = "firstName" placeholder="Enter Your First Name.....">
+                                        <input type="text" name = "lname" id = "lastName" placeholder="Enter Your Last Name.....">
                                     </div>
                                 </div>
                                 <div>
@@ -409,16 +409,17 @@
                 // let formData = $(this).serialize();
 
                 let formData = {
-                    fname : $("#fname").val(),
-                    lname : $("#lname").val(),
+                    firstName : $("#firstName").val(),
+                    lastName : $("#lastName").val(),
                     email : $("#email").val(),
                     feedback : $("#feedback").val()
                 }
                 emailjs.send("service_ex9672a", "template_tua6e6k", formData)
                     .then(function(response) {
-                        console.log("Email sent successfully:", response);
+                        $("#form-info").trigger('reset');
+                        alert("Email sent successfully:", response);
                     }, function(error) {
-                        console.error("Error sending email:", error);
+                        alert("Error sending email:", error);
                 });
                 
             });
