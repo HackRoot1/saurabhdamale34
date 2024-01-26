@@ -671,7 +671,10 @@ main #project #project-list .box .project-links a{
             width: 50%;
             padding: 20px;
             /* background-color: aliceblue; */
+            word-wrap: break-word;
+            word-break: break-all;
         }
+
         #contact-me form{
             display: -webkit-box;
             display: -ms-flexbox;
@@ -1211,6 +1214,8 @@ main #project #project-list .box .project-links a{
             width: 100%;
             padding: 0px;
             /* background-color: aliceblue; */
+            word-wrap: break-word;
+            word-break: break-all;
         }
         #contact-me form{
             display: -webkit-box;
