@@ -63,7 +63,8 @@
                     <span class="link-name">Dark Mode</span>
                 </a> -->
                 <div class="mode-toggle">
-                    <span class="switch"></span>
+                    <span class="switch">
+                    </span>
                 </div>
             </div>
 
@@ -213,7 +214,7 @@
             <section id = "project">
                 <div>
                     <div class="content-title">
-                        Projects
+                        Core PHP Projects
                     </div>
 
                     <div id="project-list">
@@ -291,6 +292,20 @@
                             </div>
                         </div>
 
+                        
+                    </div>
+
+                </div>
+            </section>
+            
+            <section id = "project">
+                <div>
+                    <div class="content-title">
+                        MERN Stack Projects
+                    </div>
+
+                    <div id="project-list">
+                        
                         <div class="box">
                             <div class = "project-img tic_tac_toe-project">
                                 <!-- <img src="/images/image2.jpg" alt=""> -->
@@ -375,7 +390,6 @@
                                 </div>
                             </form>
                         </div>
-
                         
                     </div>
 
@@ -407,20 +421,27 @@
                 // alert("Submitted");
                 // let info = $(this).serialize();
                 // let formData = $(this).serialize();
+                let firstName = $("#firstName").val();
+                let lastName= $("#lastName").val();
+                let email= $("#email").val();
 
-                let formData = {
-                    firstName : $("#firstName").val(),
-                    lastName : $("#lastName").val(),
-                    email : $("#email").val(),
-                    feedback : $("#feedback").val()
+                if(firstName != "" && lastName != "" && email != "" && email.match(/@gmail.com$/)) {
+                    let formData = {
+                        firstName : firstName,
+                        lastName : lastName,
+                        email : email,
+                        feedback : $("#feedback").val()
+                    }
+                    emailjs.send("service_ex9672a", "template_tua6e6k", formData)
+                        .then(function(response) {
+                            $("#form-info").trigger('reset');
+                            alert("Email sent successfully:", response);
+                        }, function(error) {
+                            alert("Error sending email:", error);
+                    });
+                }else{
+                    alert("Please fill out all contact fields.");
                 }
-                emailjs.send("service_ex9672a", "template_tua6e6k", formData)
-                    .then(function(response) {
-                        $("#form-info").trigger('reset');
-                        alert("Email sent successfully:", response);
-                    }, function(error) {
-                        alert("Error sending email:", error);
-                });
                 
             });
         });

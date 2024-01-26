@@ -6,12 +6,15 @@
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@200;300;400;500;600&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
 *{
     padding: 0;
     margin: 0;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+    /* font-family: 'Poppins', sans-serif; */
+    /* font-family: 'Sofia', cursive; */
 }
 
 
@@ -28,6 +31,10 @@
     --box3-color: #37D1FC;
     --title-icon-color: #fff;
     --color1 : rgb(42, 42, 42);
+
+    --switch-background : #272a30;
+    --switch-border :  #3c3f44;
+    --switch-hover : #a8b1ff;
 
     /* ====== Transition ====== */
 
@@ -54,6 +61,9 @@ body.dark{
     --text-color: rgb(0, 0, 0);
     --box-color: rgb(207, 207, 207);
     background-color: var(--background-color);
+    --switch-background : #eff0f3;
+    --switch-border :  #c2c2c4;
+    --switch-hover : #a8b1ff;
 }
 
 
@@ -89,6 +99,14 @@ header nav{
 header nav #title{
     color: var(--text-color);
     font-size: 25px;
+    font-family: 'Sofia', cursive;
+    background: linear-gradient( to right, #bd34fe, #47caff 50% );
+    
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* color: transparent; */
 }
 
 header nav .title{
@@ -134,22 +152,36 @@ header nav .mode{
     height: 22px;
     width: 40px;
     border-radius: 25px;
-    background-color: var(--text-color);
+    background-color: var(--switch-background);
+    border: 1px solid var(--switch-border);
 }
+
+
+
+.mode-toggle .switch:hover{
+    border: 1px solid var(--switch-hover);
+}
+
+
+.mode-toggle .switch.dark{
+    background-color: #eff0f3;
+    border: 1px solid #c2c2c4;
+}
+
 
 
 .switch:before{
     content: "";
     position: absolute;
-    left: 5px;
+    left: 3px;
     top: 50%;
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
     height: 15px;
     width: 15px;
-    background-color: var(--box-color);
-    border-radius: 50%;
+    background-color: #000;
+    border-radius: 50%; 
     -webkit-transition: var(--tran-03);
     -o-transition: var(--tran-03);
     transition: var(--tran-03);
@@ -157,6 +189,7 @@ header nav .mode{
 
 body.dark .switch:before{
     left: 20px;
+    background-color: #fff;
 }
 
 /* ========== sidebar design ========== */
@@ -345,6 +378,13 @@ main #main-content > #about-section > div > div > div{
   }
   #about-information .name{
     font-size: 50px;
+    font-family: 'Sofia', cursive;
+    background: linear-gradient( to left, #bd34fe 50%, #47caff );
+    
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   #about-information .dev-title{
     font-size: 40px;
@@ -478,18 +518,18 @@ main #skills div.skills-info .box .item-list .items{
     border-radius: 5px;
 }
 
-main #skills div.skills-info .box .item-list :nth-child(1){
+main #skills div.skills-info .box .item-list :nth-child(1n + 0){
     border: 1px solid #bd34fe;
     background-color: #bd34fe;
-    color: White;
+    color: black;
 }
 /* linear-gradient( -45deg, #bd34fe 50%, #47caff 50% ); */
-main #skills div.skills-info .box .item-list :nth-child(2){
+main #skills div.skills-info .box .item-list :nth-child(2n + 0){
     border: 1px solid #47caff;
     background-color: #47caff;
-    color: white;
+    color: black;
 }
-main #skills div.skills-info .box .item-list :nth-child(3){
+main #skills div.skills-info .box .item-list :nth-child(3n + 0){
     border: 1px solid blue;
     background-color: blue;
     color: white;
@@ -506,13 +546,16 @@ main #project #project-list{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 20px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between;
+            /* justify-content: space-between; */
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -521,7 +564,7 @@ main #project #project-list{
 
 main #project #project-list .box{
     min-height: 250px;
-    width: calc(100% / 4 - 10px);
+    width: calc(100% / 4 - 20px);
     background-color: var(--background-color);
     border-radius: 10px;
 }
@@ -679,6 +722,7 @@ main #project #project-list .box .project-links a{
             background-color: var(--text-color);
             color: var(--background-color);
             font-size: 20px;
+            cursor: pointer;
         }
 
 
@@ -1219,6 +1263,7 @@ main #project #project-list .box .project-links a{
             background-color: var(--text-color);
             color: var(--background-color);
             font-size: 20px;
+            cursor: pointer;
         }
 
 
