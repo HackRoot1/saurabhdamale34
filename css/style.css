@@ -825,6 +825,10 @@ main #project #project-list .box .project-links a{
             align-items: start;
             margin: 5px 0;
         }
+        
+        #contact-me .contact-details .contact-links > div span{
+            font-size: 30px;
+        }
 
         /* =========== contact form details end ========== */
 
