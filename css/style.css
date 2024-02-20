@@ -479,7 +479,8 @@ main #skills div.skills-info{
             flex-direction: row;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between;
+            justify-content: flex-start;
+    gap: 10px;
     margin-top: 10px;
     margin-bottom: 20px;
     /* align-items: center; */
