@@ -76,6 +76,7 @@ header{
     overflow: hidden;
     position: sticky;
     top: 0;
+    z-index: 22;
 }
 
 
@@ -877,34 +878,6 @@ main #project #project-list .box .project-links a{
             /* background: linear-gradient(to right, var(--box-color) 30%, rgb(87, 81, 81)); */
         }
 
-        #content {
-            text-align: center;
-            color: #fff;
-            height: 350px;
-            width: 350px;
-            /* linear-gradient( -45deg, #bd34fe 50%, #47caff 50% ); */
-            background: -o-radial-gradient(center,circle,rgba(12, 8, 234, 0.416) ,rgb(92, 85, 230) ,rgb(58, 55, 215) , rgb(51, 66, 180) 0, rgb(31, 64, 135),rgb(42, 42, 42), rgb(42, 42, 42) 100%);
-            background: radial-gradient(circle at center,rgba(12, 8, 234, 0.416) ,rgb(92, 85, 230) ,rgb(58, 55, 215) , rgb(51, 66, 180) 0, rgb(31, 64, 135),rgb(42, 42, 42), rgb(42, 42, 42) 100%);
-            background-blend-mode: multiply;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                    flex-direction: column;
-            -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                    justify-content: center;
-            -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center;
-        }
-        #content img{
-            width: 350px;
-            height: 350px;
-        }
-        
 
         #main-content #about-section{
             margin-top: 0;
