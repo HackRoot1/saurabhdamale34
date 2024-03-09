@@ -239,6 +239,7 @@ main #sidebar div{
     width: 100%;
     font-size: 20px;
     color: var(--text-color);
+    transition: all 0.3s;
 }
 
 main #sidebar div a{
@@ -300,57 +301,7 @@ main #main-content > #about-section > div > div > div{
     /* background: linear-gradient(to right, var(--box-color) 30%, rgb(87, 81, 81)); */
 }
 
-#content {
-    text-align: center;
-    color: var(--text-color);
-    height: 400px;
-    width: 400px;
-    /* linear-gradient( -45deg, #bd34fe 50%, #47caff 50% ); */
-    background: -o-radial-gradient(center,circle,rgba(12, 8, 234, 0.416) ,rgb(92, 85, 230) ,rgb(58, 55, 215) , rgb(51, 66, 180) 0, rgb(31, 64, 135),rgb(42, 42, 42), rgb(42, 42, 42) 100%);
-    background: radial-gradient(circle at center,rgba(12, 8, 234, 0.416) ,rgb(92, 85, 230) ,rgb(58, 55, 215) , rgb(51, 66, 180) 0, rgb(31, 64, 135),rgb(42, 42, 42), rgb(42, 42, 42) 100%);
-    background-blend-mode: multiply;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
 
-    body.dark #content {
-        text-align: center;
-        color: var(--text-color);
-        height: 400px;
-        width: 400px;
-        background: -o-radial-gradient(center,circle,rgb(13, 10, 175) ,rgb(46, 35, 255) ,rgb(72, 69, 255) , rgb(104, 119, 255) 0, rgb(159, 186, 255),rgb(207, 207, 207), transparent 100%);
-        background: radial-gradient(circle at center,rgb(13, 10, 175) ,rgb(46, 35, 255) ,rgb(72, 69, 255) , rgb(104, 119, 255) 0, rgb(159, 186, 255),rgb(207, 207, 207), transparent 100%);
-        /* background-blend-mode: multiply; */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-    }
-
-  #content img{
-    width: 400px;
-    height: 400px;
-  }
 
 
   #about-information{

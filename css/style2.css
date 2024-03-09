@@ -1,0 +1,1412 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    /* font-family: 'Poppins', sans-serif; */
+    /* font-family: 'Sofia', cursive; */
+}
+
+
+:root {
+
+    --primary-color: #0E4BF1;
+    --panel-color: #FFF;
+    --text-color: #000;
+    --black-light-color: #707070;
+    --border-color: #E6E5E5;
+    --toggle-color: #DDD;
+    --box1-color: #4DA3FF;
+    --box2-color: #FF36AC;
+    --box3-color: #37D1FC;
+    --title-icon-color: #fff;
+    --color1: rgb(42, 42, 42);
+
+    --switch-background: #272a30;
+    --switch-border: #3c3f44;
+    --switch-hover: #a8b1ff;
+
+    /* ====== Transition ====== */
+
+    --tran-05: all 0.5s ease;
+    --tran-03: all 0.3s ease;
+    --tran-02: all 0.2s ease;
+    --background-color: #181616;
+    --background-color: #000;
+    --text-color: rgb(160, 161, 162);
+    --box-color: rgb(42, 42, 42);
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+
+body.dark {
+    /* ======= Colors ======= */
+
+    --background-color: #ebefff;
+    /* --background-color : #fff; */
+
+
+    --text-color: rgb(0, 0, 0);
+    --box-color: rgb(207, 207, 207);
+    background-color: var(--background-color);
+    --switch-background: #eff0f3;
+    --switch-border: #c2c2c4;
+    --switch-hover: #a8b1ff;
+}
+
+
+/* ======= navigation bar ========= */
+
+header {
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+}
+
+
+header nav {
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--text-color);
+    height: 70px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+header nav #title {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-family: 'Sofia', cursive;
+    background: linear-gradient(to right, #bd34fe, #47caff 50%);
+
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* color: transparent; */
+}
+
+header nav .title {
+    color: var(--text-color);
+    margin-left: 50px;
+    font-size: 1.5rem;
+}
+
+
+header nav .mode {
+    /* padding-left: 20px; */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    white-space: nowrap;
+    background-color: var(--text-color);
+}
+
+.mode-toggle {
+    position: absolute;
+    right: 14px;
+    height: 50px;
+    min-width: 45px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    cursor: pointer;
+    /* background-color: #47caff; */
+}
+
+.mode-toggle .switch {
+    position: relative;
+    display: inline-block;
+    height: 22px;
+    width: 40px;
+    border-radius: 25px;
+    background-color: var(--switch-background);
+    border: 1px solid var(--switch-border);
+}
+
+
+
+.mode-toggle .switch:hover {
+    border: 1px solid var(--switch-hover);
+}
+
+
+.mode-toggle .switch.dark {
+    background-color: #eff0f3;
+    border: 1px solid #c2c2c4;
+}
+
+
+
+.switch:before {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    height: 15px;
+    width: 15px;
+    background-color: #000;
+    border-radius: 50%;
+    -webkit-transition: var(--tran-03);
+    -o-transition: var(--tran-03);
+    transition: var(--tran-03);
+}
+
+body.dark .switch:before {
+    left: 20px;
+    background-color: #fff;
+}
+
+/* ========== sidebar design ========== */
+
+main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+main #sidebar {
+    position: fixed;
+    width: 250px;
+    height: calc(90vh - 70px);
+    background-color: var(--box-color);
+    border-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 5vh;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+main #sidebar .sidebar-title {
+    margin-left: -20px;
+}
+
+main #sidebar div {
+    height: 50px;
+    width: 100%;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+main #sidebar div a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+main #sidebar :is(:not(div:hover), .sidebar-title) {
+    -webkit-transform: translateY(3px);
+    -ms-transform: translateY(3px);
+    transform: translateY(3px);
+}
+
+/* ========= sidebar design end =========== */
+
+
+/* ============ main content section ============= */
+main #main-content {
+    margin-left: calc(10vh + 250px);
+    width: calc(100vw - 250px);
+    min-height: 100vh;
+    background-color: var(--background-color);
+    margin-right: 20px;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--box-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--background-color);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #000;
+}
+
+/* =========== about section ============== */
+
+main #main-content>#about-section>div>div>div {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    /* align-items: center; */
+    /* background: linear-gradient(to right, var(--box-color) 30%, rgb(87, 81, 81)); */
+}
+
+#content {
+    text-align: center;
+    color: var(--text-color);
+    height: 400px;
+    width: 400px;
+    /* linear-gradient( -45deg, #bd34fe 50%, #47caff 50% ); */
+    background: -o-radial-gradient(center, circle, rgba(12, 8, 234, 0.416), rgb(92, 85, 230), rgb(58, 55, 215), rgb(51, 66, 180) 0, rgb(31, 64, 135), rgb(42, 42, 42), rgb(42, 42, 42) 100%);
+    background: radial-gradient(circle at center, rgba(12, 8, 234, 0.416), rgb(92, 85, 230), rgb(58, 55, 215), rgb(51, 66, 180) 0, rgb(31, 64, 135), rgb(42, 42, 42), rgb(42, 42, 42) 100%);
+    background-blend-mode: multiply;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+body.dark #content {
+    text-align: center;
+    color: var(--text-color);
+    height: 400px;
+    width: 400px;
+    background: -o-radial-gradient(center, circle, rgb(13, 10, 175), rgb(46, 35, 255), rgb(72, 69, 255), rgb(104, 119, 255) 0, rgb(159, 186, 255), rgb(207, 207, 207), transparent 100%);
+    background: radial-gradient(circle at center, rgb(13, 10, 175), rgb(46, 35, 255), rgb(72, 69, 255), rgb(104, 119, 255) 0, rgb(159, 186, 255), rgb(207, 207, 207), transparent 100%);
+    /* background-blend-mode: multiply; */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+#content img {
+    width: 400px;
+    height: 400px;
+}
+
+
+#about-information {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+}
+
+#about-information span {
+    margin: 10px 0;
+}
+
+#about-information .title {
+    background-color: var(--background-color);
+    padding: 10px;
+    border-radius: 5px;
+    color: rgb(58, 55, 215);
+    font-size: 1.2rem;
+}
+
+#about-information .name {
+    font-size: 3rem;
+    font-family: 'Sofia', cursive;
+    background: linear-gradient(to left, #bd34fe 50%, #47caff);
+
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: -webkit-fill-available;
+    /* text-align: center; */
+}
+
+#about-information .dev-title {
+    font-size: 2.5rem;
+    background-color: var(--background-color);
+    padding: 10px;
+    border-radius: 5px;
+    color: rgb(58, 55, 215);
+}
+
+#about-information .download-cv a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    background-color: rgb(58, 55, 215);
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+main #main-content>section {
+    min-height: 350px;
+    width: 100%;
+    background-color: var(--background-color);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 5vh 0;
+}
+
+main #main-content>section>div {
+    /* height same as parent element */
+    min-height: 350px;
+    width: 100%;
+    background-color: var(--box-color);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    /* margin: 5vh 0; */
+}
+
+
+/* =========== about section end ============== */
+/* =========== skills section ============ */
+
+
+
+main #main-content>section>div>div {
+    min-height: 100px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+    padding: 0 50px;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+main #main-content>section>div> :not(:nth-child(1)) {
+    margin-bottom: 5vh;
+}
+
+main #skills div.skills-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+main #skills div.skills-info .box {
+    width: calc(calc(100% / 3) - 10px);
+    min-height: 200px;
+    border: 1px solid var(--text-color);
+}
+
+
+main #skills div.skills-info .box .title {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+main #skills div.skills-info .box .item-list {
+    font-size: 1.2rem;
+    list-style: none;
+    padding: 10px;
+    margin-top: 10px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto 5px auto 5px auto;
+    grid-template-columns: auto auto auto;
+    -webkit-column-gap: 5px;
+    -moz-column-gap: 5px;
+    column-gap: 5px;
+    row-gap: 5px;
+}
+
+main #skills div.skills-info .box .item-list .items {
+    border: 1px solid rgb(84, 84, 84);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+main #skills div.skills-info .box .item-list :nth-child(1n + 0) {
+    border: 1px solid #bd34fe;
+    background-color: #bd34fe;
+    color: black;
+}
+
+/* linear-gradient( -45deg, #bd34fe 50%, #47caff 50% ); */
+main #skills div.skills-info .box .item-list :nth-child(2n + 0) {
+    border: 1px solid #47caff;
+    background-color: #47caff;
+    color: black;
+}
+
+main #skills div.skills-info .box .item-list :nth-child(3n + 0) {
+    border: 1px solid blue;
+    background-color: blue;
+    color: white;
+}
+
+
+
+
+/* =========== skills section ============ */
+
+/* =========== Project section ============ */
+
+main #project #project-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 20px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+main #project #project-list .box {
+    min-height: 250px;
+    width: calc(100% / 4 - 20px);
+    background-color: var(--background-color);
+    border-radius: 10px;
+}
+
+body.dark main #project #project-list .box {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+main #project #project-list .box .project-info div {
+    margin: 10px 0;
+    height: 30px;
+}
+
+
+
+main #project #project-list .box .project-img {
+    height: 150px;
+    width: 100%;
+    border-radius: 10px 10px 0 0px;
+}
+
+
+main #project #project-list .box .hms-project {
+    background: url("../images/hospital.jpg") no-repeat;
+    background-size: cover;
+}
+
+
+main #project #project-list .box .restaurant-project {
+    background: url("../images/dawat.jpg") no-repeat;
+    background-size: cover;
+}
+
+
+main #project #project-list .box .todolist-project {
+    background: url("../images/todolist.png") no-repeat;
+    background-size: cover;
+}
+
+
+main #project #project-list .box .tic_tac_toe-project {
+    background: url("../images/tic_tac_toe.png") no-repeat;
+    background-size: cover;
+}
+
+main #project #project-list .box .project-info {
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 20px;
+}
+
+main #project #project-list .box .project-code {
+    font-size: 1rem;
+}
+
+main #project #project-list .box .project-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+main #project #project-list .box .project-links a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+
+
+/* =========== Project section end ============ */
+
+
+/* =========== Contact Me section ============ */
+
+/* =========== contact form =========== */
+#contact-me>div>.contact-details {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    /* background-color: aquamarine; */
+    /* justify-content: start; */
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+#contact-me>div>.contact-details>div {
+    width: 50%;
+    padding: 20px;
+    word-wrap: break-word;
+    word-break: break-all;
+    background-color: var(--background-color);
+    border-radius: 10px;
+}
+
+#contact-me form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    /* background-color: aliceblue; */
+    width: 100%;
+}
+
+#contact-me form div {
+    width: 100%;
+    min-height: 70px;
+}
+
+#contact-me form>div input {
+    width: 49%;
+    height: 50px;
+    border-radius: 5px;
+    padding-left: 20px;
+    background-color: var(--box-color);
+    border: none;
+    outline: none;
+    color: var(--text-color);
+}
+
+#contact-me form>div>input {
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    padding-left: 20px;
+
+}
+
+#contact-me form>div>input[type='button'] {
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    padding: 0;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+
+#contact-me form div .feedback {
+    height: 100px;
+}
+
+#contact-me form div textarea {
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: var(--box-color);
+    color: var(--text-color);
+}
+
+/* ========= contact form end ========== */
+
+/* =========== contact form details ========== */
+
+#contact-me>div>.contact-details {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+}
+
+#contact-me>div>.contact-details>.project-links {
+    padding: 20px;
+    background-color: antiquewhite;
+}
+
+#contact-me .contact-details .contact-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    min-height: 100%;
+}
+
+
+
+
+#contact-me .contact-details .contact-links>div {
+    margin: 10px 0;
+    width: 100%;
+    font-size: 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+    column-gap: 10px;
+}
+
+
+#contact-me .contact-details .contact-links>div.name {
+    font-size: 2rem;
+    font-family: 'Sofia', cursive;
+    background: linear-gradient(to left, #bd34fe 50%, #47caff);
+    background-size: 100% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: -webkit-fill-available;
+    margin: 5px 0;
+}
+
+#contact-me .contact-details .contact-links>div.contact-using {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin: 5px 0;
+}
+
+#contact-me .contact-details .contact-links>div span {
+    font-size: 2rem;
+}
+
+/* =========== contact form details end ========== */
+
+/* =========== Contact Me section end ============ */
+
+
+
+/* ============ main content section end ============ */
+
+
+
+
+
+
+
+
+
+/* =================== Responsive for mobile ================= */
+@media only screen and (max-width: 600px) {
+
+    header {
+        overflow: hidden;
+        position: sticky;
+        top: 0;
+    }
+
+    main {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+
+    main #sidebar {
+        display: none;
+    }
+
+
+
+    /* ============ main content section ============= */
+    main #main-content {
+        margin-left: 0;
+        width: 100vw;
+        min-height: 100vh;
+        background-color: var(--background-color);
+        margin-right: 0px;
+    }
+
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: var(--box-color);
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: var(--background-color);
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #000;
+    }
+
+    /* =========== about section ============== */
+
+    main #main-content>#about-section>div>div {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: start;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: start;
+        margin-bottom: 5vh;
+    }
+
+    main #main-content>#about-section>div>div>div {
+        width: 100%;
+        /* background: linear-gradient(to right, var(--box-color) 30%, rgb(87, 81, 81)); */
+    }
+
+    #content {
+        text-align: center;
+        color: #fff;
+        height: 350px;
+        width: 350px;
+        /* linear-gradient( -45deg, #bd34fe 50%, #47caff 50% ); */
+        background: -o-radial-gradient(center, circle, rgba(12, 8, 234, 0.416), rgb(92, 85, 230), rgb(58, 55, 215), rgb(51, 66, 180) 0, rgb(31, 64, 135), rgb(42, 42, 42), rgb(42, 42, 42) 100%);
+        background: radial-gradient(circle at center, rgba(12, 8, 234, 0.416), rgb(92, 85, 230), rgb(58, 55, 215), rgb(51, 66, 180) 0, rgb(31, 64, 135), rgb(42, 42, 42), rgb(42, 42, 42) 100%);
+        background-blend-mode: multiply;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    #content img {
+        width: 350px;
+        height: 350px;
+    }
+
+
+    #main-content #about-section {
+        margin-top: 0;
+    }
+
+    #main-content #contact-me {
+        margin-bottom: 0;
+    }
+
+
+    #about-information {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    #about-information span {
+        margin: 10px 0;
+        display: block;
+    }
+
+    #about-information .title {
+        background-color: var(--background-color);
+        padding: 10px;
+        border-radius: 5px;
+        color: rgb(58, 55, 215);
+        font-size: 1.2rem;
+    }
+
+    #about-information .name {
+        font-size: 2rem;
+        width: -webkit-fill-available;
+        text-align: center;
+    }
+
+    #about-information .dev-title {
+        font-size: 1.2rem;
+        background-color: var(--background-color);
+        padding: 10px;
+        border-radius: 5px;
+        color: rgb(58, 55, 215);
+    }
+
+    #about-information .download-cv {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+    #about-information .download-cv a {
+        text-decoration: none;
+        font-size: 1rem;
+        background-color: rgb(58, 55, 215);
+        padding: 10px;
+        margin-right: 0;
+        border-radius: 5px;
+        color: white;
+    }
+
+
+    main #main-content>section {
+        min-height: 350px;
+        width: 100%;
+        background-color: var(--background-color);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin: 5vh 0;
+    }
+
+    main #main-content>section>div {
+        /* height same as parent element */
+        min-height: 350px;
+        width: 100%;
+        background-color: var(--box-color);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        /* margin: 5vh 0; */
+    }
+
+
+    /* =========== about section end ============== */
+    /* =========== skills section ============ */
+
+
+
+    main #main-content>section>div>div {
+        min-height: 100px;
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: start;
+        padding: 0 50px;
+        font-size: 2rem;
+        color: var(--text-color);
+    }
+
+    main #main-content>section>div> :not(:nth-child(1)) {
+        margin-bottom: 5vh;
+    }
+
+    main #skills div.skills-info {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        /* align-items: center; */
+    }
+
+    main #skills div.skills-info .box {
+        width: 100%;
+        min-height: 200px;
+        background-color: var(--box-color);
+        border: 1px solid var(--text-color);
+        margin: 10px 0;
+        /* display: flex;
+            flex-direction: column; */
+    }
+
+
+    main #skills div.skills-info .box .title {
+        font-size: 1.2rem;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    main #skills div.skills-info .box .item-list {
+        font-size: 1.2rem;
+        list-style: none;
+        padding: 10px;
+        /* border: 1px solid red; */
+        margin-top: 10px;
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: auto 5px auto;
+        grid-template-columns: auto auto;
+        -webkit-column-gap: 5px;
+        -moz-column-gap: 5px;
+        column-gap: 5px;
+        row-gap: 5px;
+    }
+
+    main #skills div.skills-info .box .item-list .items {
+        border: 1px solid rgb(84, 84, 84);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+
+
+
+    /* =========== skills section ============ */
+
+    /* =========== Project section ============ */
+
+    main #project #project-list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: start;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: start;
+        /* background-color: aliceblue; */
+    }
+
+    main #project #project-list .box {
+        min-height: 250px;
+        width: 100%;
+        background-color: rgb(64, 64, 64);
+        border-radius: 10px;
+        margin-bottom: 5vh;
+    }
+
+
+
+    main #project #project-list .box .project-img {
+        height: 150px;
+        width: 100%;
+        border-radius: 10px 10px 0 0px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        /* backdrop-filter: blur(10px); */
+    }
+
+    main #project #project-list .box .project-info {
+        display: block;
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 20px;
+    }
+
+    main #project #project-list .box .project-code {
+        font-size: 1rem;
+    }
+
+    main #project #project-list .box .project-links {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+
+
+    /* =========== Project section end ============ */
+
+
+    /* =========== Contact Me section ============ */
+
+    /* =========== contact form =========== */
+    #contact-me>div>.contact-details {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+        /* background-color: aquamarine; */
+        /* justify-content: start; */
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: start;
+        row-gap: 10px;
+    }
+
+    #contact-me>div>.contact-details>div {
+        width: 100%;
+        padding: 0px;
+        /* background-color: aliceblue; */
+        word-wrap: break-word;
+        word-break: break-all;
+        background-color: var(--background-color);
+        border-radius: 10px;
+    }
+
+    #contact-me form {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        /* background-color: aliceblue; */
+        width: 100%;
+        padding: 10px;
+    }
+
+    #contact-me form div {
+        width: 100%;
+        min-height: 70px;
+    }
+
+    #contact-me form>div input {
+        width: 100%;
+        height: 50px;
+        border-radius: 5px;
+        padding-left: 20px;
+        margin-top: 5px;
+        background-color: var(--box-color);
+        border: none;
+        outline: none;
+        color: var(--text-color);
+    }
+
+    #contact-me form>div>input {
+        width: 100%;
+        height: 50px;
+        border-radius: 5px;
+        padding-left: 20px;
+
+    }
+
+    #contact-me form>div>input[type='button'] {
+        width: 100%;
+        height: 50px;
+        border-radius: 5px;
+        padding: 0;
+        background-color: var(--text-color);
+        color: var(--background-color);
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+
+
+    #contact-me form div .feedback {
+        height: 100px;
+    }
+
+    #contact-me form div textarea {
+        width: 100%;
+        height: 100px;
+        border-radius: 5px;
+        padding: 10px;
+        border: none;
+        outline: none;
+        background-color: var(--box-color);
+        color: var(--text-color);
+    }
+
+    /* ========= contact form end ========== */
+
+    /* =========== contact form details ========== */
+
+    #contact-me>div>.contact-details>.project-links {
+        padding: 20px;
+        background-color: antiquewhite;
+    }
+
+    #contact-me .contact-details {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    }
+
+    #contact-me .contact-details .contact-links {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: start;
+    }
+
+
+    #contact-me .contact-details .contact-links>div {
+        margin: 10px 0;
+        width: 100%;
+        font-size: 1.2rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: start;
+        padding: 0 20px;
+        column-gap: 10px;
+    }
+
+
+
+    /* =========== contact form details end ========== */
+
+    /* =========== Contact Me section end ============ */
+
+
+
+    /* ============ main content section end ============ */
+
+
+
+
+}
+
+
+
+
+/* =================== Responsive for mobile end ================= */
+.example {
+    display: -ms-grid;
+    display: grid;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
+}

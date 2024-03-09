@@ -1,0 +1,50 @@
+*,:root,html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: white;
+    font-size: 18px;
+}
+
+
+header {
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    background-color: rgb(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+}
+header nav {
+    height: 50px;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    font-size: 1.5rem;
+    
+}
+
+header nav .mode {
+    background: #f0f23e;
+    width: 60px;
+    height: 30px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    border: 2px solid blue;
+}
+
+header nav .mode .mode-toggle {
+    height: 20px;
+    width: 20px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    border: 2px solid black;
+    cursor: pointer;
+}
