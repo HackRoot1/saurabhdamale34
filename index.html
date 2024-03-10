@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Portfolio - AlgoAtlas</title>
 
     <!-- ========== Third party email.js is attached ============ -->
     <!-- ======== email.js cdn link =========== -->
@@ -15,13 +15,15 @@
     
 
     <!-- =========== external css ============ -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
 
 
     <!-- ===== Iconscout CSS ====== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
     <style>
+
+        /* toggle button design */
         #screen-mode{
             background-color: #575757;
             width: 70px;
@@ -47,6 +49,11 @@
             align-items: center;
         }
 
+        /*  end  */
+
+
+        /* about section rotation design */
+
 
         #content {
             text-align: center;
@@ -60,10 +67,9 @@
         }
 
         #content .one {
+            /* background: linear-gradient( to right, #bd34fe, #47caff 50% ); */
+
             position: absolute;
-            /* top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%); */
             height: 250px;
             width: 250px;
             background-color: rgba(104, 119, 255, 0.281);
@@ -77,10 +83,6 @@
         }
         
         #content .two {
-            /* position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%); */
             height: 250px;
             width: 250px;
             background-color: rgba(104, 119, 255, 0.281);
@@ -98,32 +100,139 @@
             font-size: 200px;
         }
         
+        .switch-bar {
+            display: none;
+        }
+        /*  end  */
+
+
+
+        /* only for navigation bar  */
+        @media only screen and (min-width: 320px) and (max-width: 1023.98px) {
+            main #sidebar {
+                display: none;
+                /* background-color: #37D1FC; */
+                width: 100vw;
+                z-index: 22;
+                margin: 0;
+                border-radius: 0;
+                height: calc(100vh - 50px);
+                scroll-behavior: unset;
+            }
+
+
+            main #main-content {
+                width: 100vw;
+                margin-left: 20px;
+            }
+            .mode {
+                gap: 10px;
+            }
+            .mode-toggle {
+                position: static;
+            }
+
+            .switch-bar {
+                width: 35px;
+                height: 35px;
+                background-color: var(--switch-background);
+                color: var(--text-color);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 5px;
+            }
+        }
+        /* end */
+
+        @media only screen and (min-width: 425px) and (max-width: 767.98px) {
+
+            #content {
+                width: 250px;
+                height: 250px;
+            }
+
+            #content .one {
+                width: 150px;
+                height: 150px;
+            }
+            
+            #content .two {
+                width: 150px;
+                height: 150px;
+            }
+
+            #content .three {
+                font-size: 100px;
+            }
+            
+            main #main-content > #about-section > div > div {
+                width: 100%;
+                display: flex;
+                flex-direction: column-reverse;
+                margin: 10px 0;
+            }
+            
+            main #main-content > #about-section > div > div > div {
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #about-information .name{
+                text-align: center;
+            }
+            
+            #contact-me > div > .contact-details{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 20px;
+            }
+
+            #contact-me > div > .contact-details > div{
+                width: 100%;
+            }
+
+        }
+
+
 
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <div id = "title">Portfolio</div>
-            <!-- <div id = "sidebar-open" class="title">
-                <i class="uil uil-bars"></i>
-            </div> -->
+            <div id = "title">AlgoAtlas</div>
 
 
             <div class = "mode">
-                <!-- <a href="">
-                    <i class="uil uil-moon"></i>
-                    <span class="link-name">Dark Mode</span>
-                </a> -->
                 <div class="mode-toggle">
                     <span class="switch">
                     </span>
+                </div>
+                <div class = "switch-bar">
+                    <i class="uil uil-bars"></i>
                 </div>
             </div>
 
 
         </nav>
     </header>
+
+    <script>
+        $(document).ready(function () {
+            $(".switch-bar").on("click", function () {
+                $("#sidebar").fadeToggle();
+                // alert("hello");
+            });
+
+            $("#sidebar").on("change", function() {
+                $("#sidebar").hide();
+            });
+        });
+    </script>
 
     <main>
         <section id = "sidebar">
@@ -185,7 +294,7 @@
         <section id = "main-content">
             <section id = "about-section">
                 <div>
-                    <div >
+                    <div>
                         <div id = "about-information">
                             <span class = "title">
                                 Hello I'm 
@@ -203,12 +312,12 @@
                                 </a>
                             </span>
                         </div>
+
                         <div>
                             <div id = "content">
                                 <div class="one"></div>
                                 <div class="two"></div>
-                                <div class="three">S</div>
-                                <!-- <img src="images/s-letter-logo-png-849.png" alt=""> -->
+                                <div class="three">A</div>
                             </div>
                         </div>
                     </div>
@@ -251,9 +360,6 @@
                             </div>
                         </div>
                         
-                    </div>
-                    
-                    <div class = "skills-info">
                         <div class="box">
                             <div class="title">Database</div>
                             <div class = "item-list">
@@ -281,7 +387,7 @@
                         Core PHP Projects
                     </div>
 
-                    <div id="project-list">
+                    <div class="project-list">
                         <div class="box">
                             <div class = "project-img hms-project">
                                 <!-- <img src="/images/image2.jpg" alt=""> -->
@@ -368,7 +474,7 @@
                         MERN Stack Projects
                     </div>
 
-                    <div id="project-list">
+                    <div class="project-list">
                         
                         <div class="box">
                             <div class = "project-img tic_tac_toe-project">

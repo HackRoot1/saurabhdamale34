@@ -47,7 +47,9 @@
     --box-color: rgb(42, 42, 42);
 }
 
-
+html {
+    scroll-behavior: smooth;
+}
 
 body{
     background-color: var(--background-color);
@@ -56,21 +58,18 @@ body{
 
 body.dark{
     /* ======= Colors ======= */
-
     --background-color : #ebefff;
-    /* --background-color : #fff; */
-    
-    
     --text-color: rgb(0, 0, 0);
     --box-color: rgb(207, 207, 207);
-    background-color: var(--background-color);
     --switch-background : #eff0f3;
     --switch-border :  #c2c2c4;
     --switch-hover : #a8b1ff;
+
+    background-color: var(--background-color);
 }
 
 
-/* ======= navigation bar ========= */
+/* =========================== navigation bar =============================== */
 
 header{
     overflow: hidden;
@@ -84,19 +83,10 @@ header nav{
     background-color: var(--background-color);
     border-bottom: 1px solid var(--text-color);
     height: 70px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     padding: 0 50px;
 }
 
@@ -105,29 +95,24 @@ header nav #title{
     font-size: 25px;
     font-family: 'Sofia', cursive;
     background: linear-gradient( to right, #bd34fe, #47caff 50% );
-    
+    padding: 0 0 0 5px;
     background-size: 200% auto;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* color: transparent; */
 }
 
 header nav .title{
-    color: var(--text-color);
-    margin-left: 50px;
-    font-size: 25px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: -webkit-fill-available;
 }
 
 
 header nav .mode{
-    /* padding-left: 20px; */
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
     white-space: nowrap;
     background-color: var(--text-color);
 }
@@ -137,17 +122,10 @@ header nav .mode{
     right: 14px;
     height: 50px;
     min-width: 45px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    /* background-color: #47caff; */
 }
 
 .mode-toggle .switch{
@@ -179,15 +157,11 @@ header nav .mode{
     position: absolute;
     left: 3px;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
+    transform: translateY(-50%);
     height: 15px;
     width: 15px;
     background-color: #000;
     border-radius: 50%; 
-    -webkit-transition: var(--tran-03);
-    -o-transition: var(--tran-03);
     transition: var(--tran-03);
 }
 
@@ -196,16 +170,17 @@ body.dark .switch:before{
     background-color: #fff;
 }
 
-/* ========== sidebar design ========== */
+/* ============================= end =============================== */
+
+
+
+
+
+/* ============================== sidebar design ================================= */
 
 main{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
 }
 
 main #sidebar{
@@ -214,20 +189,11 @@ main #sidebar{
     height: calc(90vh - 70px);
     background-color: var(--box-color);
     border-radius: 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     margin: 5vh;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    align-items: start;
+    justify-content: start;
     padding-left: 50px;
     padding-top: 50px;
 }
@@ -235,6 +201,7 @@ main #sidebar{
 main #sidebar .sidebar-title{
     margin-left: -20px;
 }
+
 main #sidebar div{
     height: 50px;
     width: 100%;
@@ -249,16 +216,18 @@ main #sidebar div a{
 }
 
 main #sidebar :is(:not(div:hover), .sidebar-title){
-    /* font-size: 25px; */
-    -webkit-transform: translateY(3px);
-        -ms-transform: translateY(3px);
-            transform: translateY(3px);
+    transform: translateY(3px);
 }
 
-/* ========= sidebar design end =========== */
+/* ====================================  end ==================================== */
 
 
-/* ============ main content section ============= */
+
+
+
+
+
+/* ================================ main content section =========================== */
 main #main-content{
     margin-left: calc(10vh + 250px);
     width: calc(100vw - 250px);
@@ -288,37 +257,26 @@ main #main-content{
     background: #000; 
   }
 
-/* =========== about section ============== */
+/* ======================================== end ============================== */
+
+
+
+
+
+
+/* ====================================== about section ================================== */
 
 main #main-content > #about-section > div > div > div{
     width: 50%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    /* align-items: center; */
-    /* background: linear-gradient(to right, var(--box-color) 30%, rgb(87, 81, 81)); */
+    justify-content: center;
 }
 
-
-
-
   #about-information{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
   }
 
   #about-information span{
@@ -341,7 +299,6 @@ main #main-content > #about-section > div > div > div{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     width: -webkit-fill-available;
-    /* text-align: center; */
   }
   #about-information .dev-title{
     font-size: 40px;
@@ -365,19 +322,10 @@ main #main-content > section{
     min-height: 350px;
     width: 100%;
     background-color: var(--background-color);
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
     margin: 5vh 0;
 }
 main #main-content > section > div{
@@ -385,34 +333,27 @@ main #main-content > section > div{
     min-height: 350px;
     width: 100%;
     background-color: var(--box-color);
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    /* margin: 5vh 0; */
+    flex-direction: column;
 }
 
+/* ===========================================  end ===================================== */
 
-/* =========== about section end ============== */
-/* =========== skills section ============ */
 
+
+
+
+
+
+/* ==================================== skills section =============================== */
 
 
 main #main-content > section > div > div{
     min-height: 100px;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    align-items: center;
+    justify-content: start;
     padding: 0 50px;
     font-size: 30px;
     color: var(--text-color);
@@ -422,29 +363,18 @@ main #main-content > section > div > :not(:nth-child(1)){
 }
 
 main #skills div.skills-info{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
     gap: 10px;
     margin-top: 10px;
     margin-bottom: 20px;
-    /* align-items: center; */
 }
 
 main #skills div.skills-info .box{
-    width: calc(calc(100% / 3) - 10px);
     min-height: 200px;
-    /* background-color: var(--background-color); */
     border: 1px solid var(--text-color);
-    /* display: flex;
-    flex-direction: column; */
 }
 
 
@@ -458,15 +388,10 @@ main #skills div.skills-info .box .item-list{
     font-size: 20px;
     list-style: none;
     padding: 10px;
-    /* border: 1px solid red; */
     margin-top: 10px;
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: auto 5px auto 5px auto;
     grid-template-columns: auto auto auto;
-    -webkit-column-gap: 5px;
-       -moz-column-gap: 5px;
-            column-gap: 5px;
+    column-gap: 5px;
     row-gap: 5px;
 }
 
@@ -492,137 +417,110 @@ main #skills div.skills-info .box .item-list :nth-child(3n + 0){
     background-color: blue;
     color: white;
 }
+/* ====================================== end ==================================== */
 
 
 
 
-/* =========== skills section ============ */
 
-/* =========== Project section ============ */
 
-main #project #project-list{
-    display: -webkit-box;
-    display: -ms-flexbox;
+
+/* ================================ Project section ================================ */
+
+main #project .project-list{
     display: flex;
     flex-wrap: wrap;
     column-gap: 20px;
     row-gap: 20px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            /* justify-content: space-between; */
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    /* background-color: aliceblue; */
+    flex-direction: row;
+    align-items: center;
 }
 
-main #project #project-list .box{
+main #project .project-list .box{
     min-height: 250px;
-    width: calc(100% / 4 - 20px);
     background-color: var(--background-color);
     border-radius: 10px;
 }
 
-body.dark main #project #project-list .box{
+body.dark main #project .project-list .box{
     background-color: var(--background-color);
     color: var(--text-color);
 }
 
-main #project #project-list .box .project-info div{
+main #project .project-list .box .project-info div{
     margin: 10px 0;
     height: 30px;
 }
 
 
 
-main #project #project-list .box .project-img{
+main #project .project-list .box .project-img{
     height: 150px;
     width: 100%;
     border-radius: 10px 10px 0 0px;
-    /* background: url("../images/image2.jpg") no-repeat; */
-    /* background-size: cover; */
 }
 
 
-main #project #project-list .box .hms-project{
+main #project .project-list .box .hms-project{
     background: url("../images/hospital.jpg") no-repeat;
     background-size: cover;
 }
 
 
-main #project #project-list .box .restaurant-project{
+main #project .project-list .box .restaurant-project{
     background: url("../images/dawat.jpg") no-repeat;
     background-size: cover;
 }
 
 
-main #project #project-list .box .todolist-project{
+main #project .project-list .box .todolist-project{
     background: url("../images/todolist.png") no-repeat;
     background-size: cover;
 }
 
 
-main #project #project-list .box .tic_tac_toe-project{
+main #project .project-list .box .tic_tac_toe-project{
     background: url("../images/tic_tac_toe.png") no-repeat;
     background-size: cover;
 }
 
-main #project #project-list .box .project-info{
+main #project .project-list .box .project-info{
     display: block;
     width: 100%;
     font-size: 20px;
     padding: 20px;
 }
 
-main #project #project-list .box .project-code{
+main #project .project-list .box .project-code{
     font-size: 15px;
 }
 
-main #project #project-list .box .project-links{
-    display: -webkit-box;
-    display: -ms-flexbox;
+main #project .project-list .box .project-links{
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-between;
     padding: 10px;
 }
 
-main #project #project-list .box .project-links a{
+main #project .project-list .box .project-links a{
     text-decoration: none;
     color: var(--text-color);
 }
+/* ============================== end =============================== */
 
 
 
-/* =========== Project section end ============ */
 
 
-/* =========== Contact Me section ============ */
 
-        /* =========== contact form =========== */
+/* ============================= Contact Me section ============================ */
+
+        /* ======================= contact form ============================= */
         #contact-me > div > .contact-details{
             width: 100%;
-            display: -webkit-box;
-            display: -ms-flexbox;
             display: flex;
-            -webkit-box-orient: horizontal;
-            -webkit-box-direction: normal;
-                -ms-flex-direction: row;
-                    flex-direction: row;
-            /* background-color: aquamarine; */
-            /* justify-content: start; */
-            -webkit-box-align: stretch;
-                -ms-flex-align: stretch;
-                    align-items: stretch;
+            flex-direction: row;
+            align-items: stretch;
         }
 
         #contact-me > div > .contact-details > div{
@@ -635,20 +533,10 @@ main #project #project-list .box .project-links a{
         }
 
         #contact-me form{
-            display: -webkit-box;
-            display: -ms-flexbox;
             display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                    flex-direction: column;
-            -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                    justify-content: center;
-            -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center;
-            /* background-color: aliceblue; */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             width: 100%;
         }
 
@@ -703,9 +591,12 @@ main #project #project-list .box .project-links a{
             color: var(--text-color);
         }
 
-        /* ========= contact form end ========== */
+        /* ========================= end =========================== */
 
-        /* =========== contact form details ========== */
+
+
+
+        /* ===================== contact form details ======================== */
 
         #contact-me > div > .contact-details {
             display: flex;
@@ -718,44 +609,24 @@ main #project #project-list .box .project-links a{
         }
         
         #contact-me .contact-details .contact-links{
-            display: -webkit-box;
-            display: -ms-flexbox;
             display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                    flex-direction: column;
-            -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                    justify-content: center;
-            -webkit-box-align: start;
-                -ms-flex-align: start;
-                    align-items: start;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
             background-color: var(--background-color);
             border-radius: 10px;
             min-height: 100%;
         }
 
         
-        
-        
         #contact-me .contact-details .contact-links > div{
             margin: 10px 0;
             width: 100%;
             font-size: 25px;
-            display: -webkit-box;
-            display: -ms-flexbox;
             display: flex;
-            -webkit-box-orient: horizontal;
-            -webkit-box-direction: normal;
-                -ms-flex-direction: row;
-                    flex-direction: row;
-            -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center;
-            -webkit-box-pack: start;
-                -ms-flex-pack: start;
-                    justify-content: start;
+            flex-direction: row;
+            align-items: center;
+            justify-content: start;
             column-gap: 10px;
         }
 
@@ -783,13 +654,13 @@ main #project #project-list .box .project-links a{
             font-size: 30px;
         }
 
-        /* =========== contact form details end ========== */
+        /* ============================= end ============================ */
 
-/* =========== Contact Me section end ============ */
+/* ========================== end ================================ */
 
 
 
-/* ============ main content section end ============ */
+/* ============================ end =================================== */
 
 
 
@@ -1077,10 +948,11 @@ main #project #project-list .box .project-links a{
 
         /* =========== Project section ============ */
 
-        main #project #project-list{
+        main #project .project-list{
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
+            flex-wrap: wrap;
             -webkit-box-orient: vertical;
             -webkit-box-direction: normal;
                 -ms-flex-direction: column;
@@ -1094,9 +966,8 @@ main #project #project-list .box .project-links a{
             /* background-color: aliceblue; */
         }
 
-        main #project #project-list .box{
+        main #project .project-list .box{
             min-height: 250px;
-            width: 100% ;
             background-color: rgb(64, 64, 64);
             border-radius: 10px;
             margin-bottom: 5vh;
@@ -1104,7 +975,7 @@ main #project #project-list .box .project-links a{
 
 
 
-        main #project #project-list .box .project-img{
+        main #project .project-list .box .project-img{
             height: 150px;
             width: 100%;
             border-radius: 10px 10px 0 0px;
@@ -1114,18 +985,18 @@ main #project #project-list .box .project-links a{
             /* backdrop-filter: blur(10px); */
         }
 
-        main #project #project-list .box .project-info{
+        main #project .project-list .box .project-info{
             display: block;
             width: 100%;
             font-size: 20px;
             padding: 20px;
         }
 
-        main #project #project-list .box .project-code{
+        main #project .project-list .box .project-code{
             font-size: 15px;
         }
 
-        main #project #project-list .box .project-links{
+        main #project .project-list .box .project-links{
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -1318,17 +1189,4 @@ main #project #project-list .box .project-links a{
 
 
 
-/* =================== Responsive for mobile end ================= */.example {
-    display: -ms-grid;
-    display: grid;
-    -webkit-transition: all .5s;
-    -o-transition: all .5s;
-    transition: all .5s;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
-    background: -o-linear-gradient(top, white, black);
-    background: linear-gradient(to bottom, white, black);
-}
+/* =================== Responsive for mobile end ================= */
