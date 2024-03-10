@@ -270,6 +270,7 @@ main #main-content{
 /* ====================================== about section ================================== */
 #about-section > div{
     background-color: var(--background-color);
+    /* background: linear-gradient(45deg, #8484845b 30%, #57575772); */
 }
 
 body.dark #about-section > div {
@@ -300,7 +301,7 @@ main #main-content > #about-section > div > div > div{
     font-size: 20px;
   }
   #about-information .name{
-    font-size: 50px;
+    font-size: 3rem;
     font-family: 'Sofia', cursive;
     background: linear-gradient( to left, #bd34fe 50%, #47caff );
     

@@ -67,14 +67,16 @@
         }
 
         #content .one {
-            /* background: linear-gradient( to right, #bd34fe, #47caff 50% ); */
-
             position: absolute;
             height: 250px;
             width: 250px;
-            background-color: rgba(104, 119, 255, 0.281);
+            background-color: rgba(75, 75, 75, 0.281);
             transform: rotate(0deg);
             animation: rotateSquare 10s linear infinite;
+        }
+        
+        body.dark #content .one {
+            background-color: rgba(104, 119, 255, 0.281);
         }
 
         @keyframes rotateSquare {
@@ -85,9 +87,14 @@
         #content .two {
             height: 250px;
             width: 250px;
-            background-color: rgba(104, 119, 255, 0.281);
+            /* background-color: rgba(104, 119, 255, 0.281); */
+            background-color: rgba(75, 75, 75, 0.281);
             transform: rotate(45deg);
             animation: rotateSquare2 10s linear infinite;
+        }
+
+        body.dark #content .one {
+            background-color: rgba(104, 119, 255, 0.281);
         }
 
         @keyframes rotateSquare2 {
@@ -148,6 +155,60 @@
         @media only screen and (min-width: 425px) and (max-width: 767.98px) {
 
             #content {
+                width: 200px;
+                height: 200px;
+            }
+
+            #content .one {
+                width: 100px;
+                height: 100px;
+            }
+            
+            #content .two {
+                width: 100px;
+                height: 100px;
+            }
+
+            #content .three {
+                font-size: 50px;
+            }
+            
+            main #main-content > #about-section > div > div {
+                width: 100%;
+                display: flex;
+                flex-direction: column-reverse;
+                margin: 10px 0;
+            }
+            
+            main #main-content > #about-section > div > div > div {
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #about-information .name{
+                text-align: center;
+            }
+            
+            #contact-me > div > .contact-details{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 20px;
+            }
+
+            #contact-me > div > .contact-details > div{
+                width: 100%;
+            }
+
+        }
+
+
+
+        @media (max-width: 424.98px) {
+
+            #content {
                 width: 250px;
                 height: 250px;
             }
@@ -194,11 +255,7 @@
             #contact-me > div > .contact-details > div{
                 width: 100%;
             }
-
         }
-
-
-
     </style>
 </head>
 <body>
