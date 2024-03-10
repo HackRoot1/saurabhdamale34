@@ -96,7 +96,7 @@ header nav{
 
 header nav #title{
     color: var(--text-color);
-    font-size: 2.5vw;
+    font-size: 1.5vw;
     font-family: 'Sofia', cursive;
     background: linear-gradient( to right, #bd34fe, #47caff 50% );
     padding: 0 0 0 5px;
@@ -209,7 +209,7 @@ main #sidebar .sidebar-title{
 main #sidebar div{
     height: 50px;
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 1.5vw;
     color: var(--text-color);
     transition: all 0.3s;
 }
@@ -299,10 +299,10 @@ main #main-content > #about-section > div > div > div{
     padding: 10px;
     border-radius: 5px;
     color: rgb(58, 55, 215);
-    font-size: 1.5rem;
+    font-size: 1.5vw;
   }
   #about-information .name{
-    font-size: 2rem;
+    font-size: 2vw;
     font-family: 'Sofia', cursive;
     background: linear-gradient( to left, #bd34fe 50%, #47caff );
     
@@ -313,7 +313,7 @@ main #main-content > #about-section > div > div > div{
     width: -webkit-fill-available;
   }
   #about-information .dev-title{
-    font-size: 2.5rem;
+    font-size: 2.5vw;
     background-color: var(--background-color);
     padding: 10px;
     border-radius: 5px;
@@ -322,7 +322,7 @@ main #main-content > #about-section > div > div > div{
 
   #about-information .download-cv a{
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1vw;
     background-color: rgb(58, 55, 215);
     padding: 10px;
     margin-right: 10px;
@@ -367,7 +367,7 @@ main #main-content > section > div > div{
     align-items: center;
     justify-content: start;
     padding: 0 50px;
-    font-size: 2rem;
+    font-size: 2vw;
     color: var(--text-color);
 }
 main #main-content > section > div > :not(:nth-child(1)){
@@ -391,13 +391,13 @@ main #skills div.skills-info .box{
 
 
 main #skills div.skills-info .box .title{
-    font-size: 1.5rem;
+    font-size: 1.5vw;
     text-align: center;
     margin-top: 10px;
 }
 
 main #skills div.skills-info .box .item-list{
-    font-size: 1.5rem;
+    font-size: 1.5vw;
     list-style: none;
     padding: 10px;
     margin-top: 10px;
@@ -499,12 +499,12 @@ main #project .project-list .box .tic_tac_toe-project{
 main #project .project-list .box .project-info{
     display: block;
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 1.5vw;
     padding: 20px;
 }
 
 main #project .project-list .box .project-code{
-    font-size: 1rem;
+    font-size: 1vw;
 }
 
 main #project .project-list .box .project-links{
@@ -585,7 +585,7 @@ main #project .project-list .box .project-links a{
             padding: 0;
             background-color: var(--text-color);
             color: var(--background-color);
-            font-size: 1.5rem;
+            font-size: 1.5vw;
             cursor: pointer;
         }
 
@@ -636,7 +636,7 @@ main #project .project-list .box .project-links a{
         #contact-me .contact-details .contact-links > div{
             margin: 10px 0;
             width: 100%;
-            font-size: 1.5rem;
+            font-size: 1.5vw;
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -646,7 +646,7 @@ main #project .project-list .box .project-links a{
 
         
         #contact-me .contact-details .contact-links > div.name{
-            font-size: 2rem;
+            font-size: 2vw;
             font-family: 'Sofia', cursive;
             background: linear-gradient( to left, #bd34fe 50%, #47caff );
             background-size: 100% auto;
@@ -665,7 +665,7 @@ main #project .project-list .box .project-links a{
         }
         
         #contact-me .contact-details .contact-links > div span{
-            font-size: 2rem;
+            font-size: 2vw;
         }
 
         /* ============================= end ============================ */
@@ -680,7 +680,7 @@ main #project .project-list .box .project-links a{
             background-color: #575757;
             width: 70px;
             height: 40px;
-            font-size: 1.5rem;
+            font-size: 1.5vw;
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -756,7 +756,7 @@ main #project .project-list .box .project-links a{
 
         #content .three {
             position: absolute;
-            font-size: 15rem;
+            font-size: 13vw;
         }
         
         .switch-bar {
@@ -792,10 +792,9 @@ main #project .project-list .box .project-links a{
 
 
         /* only for navigation bar  */
-        @media only screen and (min-width: 320px) and (max-width: 1023.98px) {
+        @media only screen and (max-width: 1023.98px) {
             main #sidebar {
                 display: none;
-                /* background-color: #37D1FC; */
                 width: 100vw;
                 z-index: 22;
                 margin: 0;
@@ -806,8 +805,9 @@ main #project .project-list .box .project-links a{
 
 
             main #main-content {
-                width: 100vw;
-                margin-left: 20px;
+                width: 92vw;
+                margin-left: 4vw;
+                margin-right: 4vw;
             }
             .mode {
                 gap: 10px;
@@ -840,85 +840,153 @@ main #project .project-list .box .project-links a{
 
 
 
+@media (min-width: 768px) and (max-width: 1023.98px) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =========================== Media query for medium devices (tablets) =========================== */
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-    main #sidebar {
-        display: none;
-        /* background-color: #37D1FC;
-        width: 100vw;
-        z-index: 22;
-        margin: 0;
-        border-radius: 0;
-        height: calc(100vh - 50px); */
+    header nav {
+        padding: 1rem;
+    }
+    header nav #title{
+        font-size: 2.2vw;
     }
 
-    main #main-content {
-        width: 100vw;
-        margin-left: 20px;
+    main #sidebar div{
+        font-size: 2vw;
+    }
+
+    #about-information .title{
+        font-size: 2.5vw;
+    }
+    
+    #about-information .name{
+        font-size: 3vw;    
+    }
+
+    #about-information .dev-title{
+        font-size: 3vw;
+    }
+
+    #about-information .download-cv a{
+        font-size: 2vw;
+    }
+
+    main #main-content > section > div > div{
+        font-size: 3vw;
+    }
+
+    main #skills div.skills-info .box .title{
+        font-size: 2.5vw;
+    }
+    
+    main #skills div.skills-info .box .item-list{
+        font-size: 2vw;
+    }
+
+    main #project .project-list .box .project-info{
+        font-size: 2.2vw;
+    }
+    
+    main #project .project-list .box .project-code{
+        font-size: 1.7vw;
+    }
+
+    #contact-me form > div > input[type = 'button']{
+        font-size: 2vw;
+    }
+    #contact-me .contact-details .contact-links > div{
+        font-size: 2vw;
+    }
+    #contact-me .contact-details .contact-links > div.name{
+        font-size: 3vw;
+    }
+    #contact-me .contact-details .contact-links > div span{
+        font-size: 2.5vw;
+    }
+    #content .three {
+        font-size: 20vw;
     }
 }
-
-/* ========================================= end ========================================= */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 @media (min-width: 425px) and (max-width: 767.98px) {
 
+    header nav {
+        padding: 0 1.3rem;
+    }
+    header nav #title{
+        font-size: 3.2vw;
+    }
+
+    main #sidebar div{
+        font-size: 3vw;
+    }
+
+    #about-information .title{
+        font-size: 3vw;
+    }
+    
+    #about-information .name{
+        font-size: 4vw;    
+    }
+
+    #about-information .dev-title{
+        font-size: 4vw;
+    }
+
+    #about-information .download-cv a{
+        font-size: 3vw;
+    }
+
+    main #main-content > section > div > div{
+        font-size: 4.5vw;
+    }
+
+    main #skills div.skills-info .box .title{
+        font-size: 3.5vw;
+    }
+    
+    main #skills div.skills-info .box .item-list{
+        font-size: 3vw;
+    }
+
+    main #project .project-list .box .project-info{
+        font-size: 3.2vw;
+    }
+    
+    main #project .project-list .box .project-code{
+        font-size: 2.7vw;
+    }
+
+    #contact-me form > div > input[type = 'button']{
+        font-size: 3vw;
+    }
+    #contact-me .contact-details .contact-links > div{
+        font-size: 3vw;
+    }
+    #contact-me .contact-details .contact-links > div.name{
+        font-size: 4vw;
+    }
+    #contact-me .contact-details .contact-links > div span{
+        font-size: 4vw;
+    }
+    
     #content {
-        width: 200px;
-        height: 200px;
+        width: 40vw;
+        height: 40vw;
     }
 
     #content .one {
-        width: 100px;
-        height: 100px;
+        width: 30vw;
+        height: 30vw;
     }
     
     #content .two {
-        width: 100px;
-        height: 100px;
+        width: 30vw;
+        height: 30vw;
     }
 
     #content .three {
-        font-size: 3rem;
+        font-size: 20vw;
     }
     
     main #main-content > #about-section > div > div {
@@ -951,6 +1019,51 @@ main #project .project-list .box .project-links a{
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================== Media query for medium devices (tablets) =========================== */
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    main #sidebar {
+        display: none;
+    }
+
+    main #main-content {
+        width: 100vw;
+        margin-left: 20px;
+    }
+}
+
+/* ========================================= end ========================================= */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -985,23 +1098,81 @@ main #project .project-list .box .project-links a{
 
 @media (max-width: 424.98px) {
 
+    header nav {
+        padding: 0 1.3rem;
+    }
+
+    header nav #title{
+        font-size: 5vw;
+    }
+    
+    main #sidebar div{
+        font-size: 5vw;
+    }
+
+    #about-information .title{
+        font-size: 4vw;
+    }
+    
+    #about-information .name{
+        font-size: 6vw;    
+    }
+
+    #about-information .dev-title{
+        font-size: 6vw;
+    }
+    
+    #about-information .download-cv a{
+        font-size: 4vw;
+    }
+
+    main #main-content > section > div > div{
+        font-size: 6vw;
+    }
+
+    main #skills div.skills-info .box .title{
+        font-size: 5vw;
+    }
+    
+    main #skills div.skills-info .box .item-list{
+        font-size: 4vw;
+    }
+
+    main #project .project-list .box .project-info{
+        font-size: 5vw;
+    }
+        
+    main #project .project-list .box .project-code{
+        font-size: 4vw;
+    }
+
+    #contact-me .contact-details .contact-links > div{
+        font-size: 4vw;
+    }
+    #contact-me .contact-details .contact-links > div.name{
+        font-size: 5vw;
+    }
+    #contact-me .contact-details .contact-links > div span{
+        font-size: 5vw;
+    }
+        
     #content {
-        width: 250px;
-        height: 250px;
+        width: 40vw;
+        height: 40vw;
     }
 
     #content .one {
-        width: 150px;
-        height: 150px;
+        width: 30vw;
+        height: 30vw;
     }
     
     #content .two {
-        width: 150px;
-        height: 150px;
+        width: 30vw;
+        height: 30vw;
     }
-
+    
     #content .three {
-        font-size: 6rem;
+        font-size: 20vw;
     }
     
     main #main-content > #about-section > div > div {
@@ -1016,7 +1187,7 @@ main #project .project-list .box .project-links a{
         justify-content: center;
         align-items: center;
     }
-
+    
     #about-information .name{
         text-align: center;
     }
@@ -1032,4 +1203,6 @@ main #project .project-list .box .project-links a{
     #contact-me > div > .contact-details > div{
         width: 100%;
     }
+
+
 }
