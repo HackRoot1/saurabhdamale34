@@ -366,7 +366,7 @@ main #main-content > section > div > div{
     display: flex;
     align-items: center;
     justify-content: start;
-    padding: 0 50px;
+    padding: 0 4vw;
     font-size: 2vw;
     color: var(--text-color);
 }
@@ -793,6 +793,7 @@ main #project .project-list .box .project-links a{
 
         /* only for navigation bar  */
         @media only screen and (max-width: 1023.98px) {
+
             main #sidebar {
                 display: none;
                 width: 100vw;
@@ -1201,6 +1202,13 @@ main #project .project-list .box .project-links a{
     }
 
     #contact-me > div > .contact-details > div{
+        width: 100%;
+    }
+
+    main #project .project-list .box{
+        width: 100%;
+    }
+    main #skills div.skills-info .box{
         width: 100%;
     }
 
