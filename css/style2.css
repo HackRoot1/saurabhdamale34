@@ -59,9 +59,11 @@ body{
 
 body.dark{
     /* ======= Colors ======= */
-    --background-color : #ebefff;
+    /* --background-color : #ebefff; */
+    --background-color : #fff;
     --text-color: rgb(0, 0, 0);
     --box-color: rgb(207, 207, 207);
+    --box-color: #f0f0f0;
     --switch-background : #eff0f3;
     --switch-border :  #c2c2c4;
     --switch-hover : #a8b1ff;
