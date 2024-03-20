@@ -1223,7 +1223,7 @@ main #project .project-list .box .project-links a{
         width: 100%;
         display: flex;
         flex-direction: column-reverse;
-        margin: 10px 0;
+        margin: 25px 0;
     }
     
     main #main-content > #about-section > div > div > div {
